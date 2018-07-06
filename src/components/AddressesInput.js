@@ -5,18 +5,14 @@ import Paper from '@material-ui/core/Paper'
 
 const styles = theme => ({
   root: {
-    flexGrow: 1,
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    width: theme.spacing.unit * 100,
-    margin: 'auto',
-    // position: 'relative', 
-    // top: theme.spacing.unit * 25,
+    width: '100%',
+    marginTop: theme.spacing.unit * 3,
+    //marginBottom: theme.spacing.unit * 3,
 
-
+    overflowX: 'auto',
+    paddingBottom: theme.spacing.unit * 3
   },
-    container: {
+    form: {
       display: 'flex',
       flexWrap: 'wrap',
     },
@@ -44,9 +40,8 @@ const styles = theme => ({
           const {classes} = this.props
 
           return(
-
-            <Paper className={classes.root} elevation={10}>
-              <form className={classes.container} noValidate>
+            <Paper className={classes.root} >
+              <form className={classes.form} noValidate>
 
                 <TextField
                 label='Leaving From'
