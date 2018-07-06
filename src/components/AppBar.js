@@ -16,7 +16,7 @@ function appBar(props) {
     <div className={classes.root}>
       <AppBar position="static" color="default">
         <Toolbar>
-          <Typography variant="title" color="inherit">
+          <Typography  variant="headline" color="primary">
             Tripply
           </Typography>
         </Toolbar>
