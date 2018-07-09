@@ -44,8 +44,8 @@ class App extends Component {
         <Typography className={classes.header} 
         variant='display2'  >Get a Weather Forecast For Your Next Road Trip</Typography>
         <Paper className={classes.main} elevation={10}>
-        <AddressesInput />
-        {this.state.directions && <DirectionsTable />} 
+          <AddressesInput />
+          {this.state.directions && <DirectionsTable />} 
         </Paper>
       </div>
     );
