@@ -29,6 +29,8 @@ function DirectionsTable(props) {
         <DirectionRow key={index} direction={direction} />
     ))
 
+    debugger
+
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>

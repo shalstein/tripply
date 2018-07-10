@@ -22,7 +22,7 @@ class Direction
     def parse_steps
         steps = @directions['routes'][0]['legs'][0]['steps']
         steps.map do |step|
-            remove_style(step['html_instructions'])
+            ActionView::Base.full_sanitizer.sanitize(step['html_instructions'])
         end
     end
 
