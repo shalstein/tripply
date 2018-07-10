@@ -33,9 +33,19 @@ class App extends Component {
   constructor(){
    super()
    this.state = {
-     directions: [1,2]
+     directions: []
    }
   }
+
+  handleSearchClick = (event, t) => {
+    fetch('/api/directions')
+    .then(directions => directions.json())
+    
+    .then(directions => this.setState({directions: directions}, (e) => console.log(this.state.directions))
+    )
+    .catch(e => console.error(e))
+  }
+
   render() {
     const {classes} = this.props
     return (
@@ -44,8 +54,8 @@ class App extends Component {
         <Typography className={classes.header} 
         variant='display2'  >Get a Weather Forecast For Your Next Road Trip</Typography>
         <Paper className={classes.main} elevation={10}>
-          <AddressesInput />
-          {this.state.directions && <DirectionsTable />} 
+          <AddressesInput handleSearchClick={this.handleSearchClick} />
+          {this.state.directions.length > 0 && <DirectionsTable directions={this.state.directions} />} 
         </Paper>
       </div>
     );

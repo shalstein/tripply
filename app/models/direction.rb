@@ -1,15 +1,39 @@
 class Direction 
     include ActiveModel::Model
 
+    attr_accessor :origin, :destination
 
-    def self.fetch_directions 
-        destination = "555+Crown+St+Brooklyn+New+York"
-        origin = "Morristown+NJ"
-        # directions = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{origin}&destination=#{destination}key={ENV[google_directions_key]}"
-        
-        directions = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{origin}&destination=#{destination}"
+    def initialize(origin, destination)
+        @origin = origin
+        @destination = destination
+    end
 
-        JSON.parse directions.body
+    def fetch_directions 
+
+        response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}key={ENV[google_directions_key]}"
+    
+        @directions = JSON.parse(response.body)
+        parse_steps
         
     end
+
+    private
+
+    def parse_steps
+        steps = @directions['routes'][0]['legs'][0]['steps']
+        steps.map do |step|
+            remove_style(step['html_instructions'])
+        end
+    end
+
+    def remove_style(instruction)
+        instruction.gsub(/style=.?".*?"/, '')
+    end
+
+
+
+
+
+
 end
+

@@ -3,9 +3,9 @@ import { withStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import DirectionRow from './directionsRow'
 
 const styles = theme => ({
   root: {
@@ -22,64 +22,19 @@ const styles = theme => ({
 });
 
 
-function SimpleTable(props) {
-  const { classes } = props;
+function DirectionsTable(props) {
+  const { classes, directions } = props;
+
+    const rows = directions.map((direction, index) => (
+        <DirectionRow key={index} direction={direction} />
+    ))
 
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
         <TableBody>
-            <TableRow>
-                <TableCell className={classes.cell}>
-                    Take the <b>Autoroute 10 O</b>/<b>Autoroute 15 N</b>/<b>Autoroute 20 O</b>/<b>Pont Champlain</b> ramp to <b>Montréal</b><div>Parts of this road may be closed at certain times or days </div>
-                </TableCell>
-            </TableRow>
 
-            <TableRow>
-                <TableCell className={classes.cell}>
-                    Merge onto <b>Autoroute 10 O</b>/<b>Autoroute 15 N</b>/<b>Autoroute 20 O</b><div  >Continue to follow Autoroute 15 N</div>
-                </TableCell>
-            </TableRow>
-
-                        <TableRow>
-                <TableCell className={classes.cell}>
-                    Merge onto <b>Autoroute 10 O</b>/<b>Autoroute 15 N</b>/<b>Autoroute 20 O</b><div  >Continue to follow Autoroute 15 N</div>
-                </TableCell>
-            </TableRow>
-
-                        <TableRow>
-                <TableCell className={classes.cell}>
-                    Merge onto <b>Autoroute 10 O</b>/<b>Autoroute 15 N</b>/<b>Autoroute 20 O</b><div  >Continue to follow Autoroute 15 N</div>
-                </TableCell>
-            </TableRow>
-
-
-                        <TableRow>
-                <TableCell className={classes.cell}>
-                    Merge onto <b>Autoroute 10 O</b>/<b>Autoroute 15 N</b>/<b>Autoroute 20 O</b><div  >Continue to follow Autoroute 15 N</div>
-                </TableCell>
-            </TableRow>
-
-
-                        <TableRow>
-                <TableCell className={classes.cell}>
-                    Merge onto <b>Autoroute 10 O</b>/<b>Autoroute 15 N</b>/<b>Autoroute 20 O</b><div  >Continue to follow Autoroute 15 N</div>
-                </TableCell>
-            </TableRow>
-
-
-
-                        <TableRow>
-                <TableCell className={classes.cell}>
-                    Merge onto <b>Autoroute 10 O</b>/<b>Autoroute 15 N</b>/<b>Autoroute 20 O</b><div  >Continue to follow Autoroute 15 N</div>
-                </TableCell>
-            </TableRow>
-
-                        <TableRow>
-                <TableCell className={classes.cell}>
-                    Merge onto <b>Autoroute 10 O</b>/<b>Autoroute 15 N</b>/<b>Autoroute 20 O</b><div  >Continue to follow Autoroute 15 N</div>
-                </TableCell>
-            </TableRow>
+            {rows}
 
             
         </TableBody>
@@ -90,4 +45,4 @@ function SimpleTable(props) {
 
 
 
-export default withStyles(styles)(SimpleTable);
+export default withStyles(styles)(DirectionsTable);

@@ -45,18 +45,11 @@ const styles = theme => ({
         this.state = {
             starting: '',
             ending: '',
-            directions: {},
+            directions: [],
         }
       }
 
-      handleSearchClick = (event, t) => {
-        fetch('/api/directions')
-        .then(directions => directions.json())
-        
-        .then(directions => this.setState({directions: directions}, (e) => console.log(this.state.directions))
-        )
-        .catch(e => console.error(e))
-      }
+
 
       render(){
           const {classes} = this.props
@@ -79,7 +72,7 @@ const styles = theme => ({
                 margin='normal'
                 /> 
 
-                <Button onClick={this.handleSearchClick} variant="fab" color="primary" aria-label="search" className={classes.button}>
+                <Button onClick={this.props.handleSearchClick} variant="fab" color="primary" aria-label="search" className={classes.button}>
                   <SearchIcon  >Search</SearchIcon>
                 </Button>
 
