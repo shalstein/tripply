@@ -6,6 +6,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import DirectionRow from './directionsRow'
+import { Typography } from '@material-ui/core';
 
 const styles = theme => ({
   root: {
@@ -23,20 +24,25 @@ const styles = theme => ({
 
 
 function DirectionsTable(props) {
-  const { classes, directions } = props;
+  const { classes, steps, duration, distance } = props;
 
-    const rows = directions.map((direction, index) => (
+    const rows = steps.map((direction, index) => (
         <DirectionRow key={index} direction={direction} />
     ))
 
-    debugger
 
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
         <TableBody>
-
-            {rows}
+          <TableRow>
+            <TableCell className={classes.cell}>
+            <Typography >Distance: {distance} </Typography>
+            <Typography >Duration: {duration} </Typography>
+            </TableCell>
+          </TableRow>
+          
+          {rows}
 
             
         </TableBody>

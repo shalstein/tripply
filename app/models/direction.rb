@@ -20,20 +20,17 @@ class Direction
     private
 
     def parse_steps
-        steps = @directions['routes'][0]['legs'][0]['steps']
-        steps.map do |step|
+        leg = @directions['routes'][0]['legs'][0]
+        steps = leg['steps']
+
+        sanitized_steps = steps.map do |step|
             ActionView::Base.full_sanitizer.sanitize(step['html_instructions'])
         end
+
+
+        {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: sanitized_steps}
+
     end
-
-    def remove_style(instruction)
-        instruction.gsub(/style=.?".*?"/, '')
-    end
-
-
-
-
-
 
 end
 

@@ -33,7 +33,7 @@ class App extends Component {
   constructor(){
    super()
    this.state = {
-     directions: []
+     directions: null
    }
   }
 
@@ -55,7 +55,7 @@ class App extends Component {
         variant='display2'  >Get a Weather Forecast For Your Next Road Trip</Typography>
         <Paper className={classes.main} elevation={10}>
           <AddressesInput handleSearchClick={this.handleSearchClick} />
-          {this.state.directions.length > 0 && <DirectionsTable directions={this.state.directions} />} 
+          {this.state.directions  && <DirectionsTable steps={this.state.directions.steps} distance={this.state.directions.distance}  duration={this.state.directions.duration} />} 
         </Paper>
       </div>
     );
