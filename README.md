@@ -1,24 +1,11 @@
-# README
+# Tripply
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app allows a user to get weather reports for the entire route of their trip. With the Triply app, no more unexpected weather in the middle of your road trip. Any change in weather will be displayed with the directions giving you the opportunity to decide beforehand if you want to take a trip through this route.
 
-Things you may want to cover:
+## Status
 
-* Ruby version
+Currently, I'm working on this project and it is not yet functional.
 
-* System dependencies
+## License
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project is available as open source through the MIT License.
