@@ -3,9 +3,9 @@ class Direction
 
     attr_accessor :origin, :destination
 
-    def initialize(origin, destination)
-        @origin = origin
-        @destination = destination
+    def initialize(addresses_hash)
+        @origin = addresses_hash['origin'] 
+        @destination = addresses_hash['destination'] 
     end
 
     def fetch_directions 

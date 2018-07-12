@@ -55,7 +55,7 @@ const styles = theme => ({
           return(
             <Paper className={classes.root} >
               <form className={classes.form} noValidate>
-
+                <input type='hidden' name="authenticity_token" />
                 <TextField
                 
                 label='Leaving From'
@@ -64,8 +64,9 @@ const styles = theme => ({
 
                 margin='normal'
                 value={this.props.origin}
-                 onChange={this.props.handleAddressChange}
+                onChange={this.props.handleAddressChange}
                 />
+
 
                 <TextField
                 name='destination'

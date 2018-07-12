@@ -44,12 +44,7 @@ class App extends Component {
   }
 
   handleSearchClick = (event, t) => {
-
-    debugger
-    fetch('/api/directions', {
-      method: 'POST',
-      body: {directions: {origin: '555+crown+st+Brooklyn+NY', destination: 'Morristonwn+NJ'}}  
-    })
+    fetch(`/api/directions/?origin=${this.state.origin}&destination=${this.state.destination}`)
     .then(directions => directions.json())
     
     .then(directions => this.setState({directions: directions}, (e) => console.log(this.state.directions))
@@ -66,7 +61,7 @@ class App extends Component {
         <Typography className={classes.header} 
         variant='display2'  >Get a Weather Forecast For Your Next Road Trip</Typography>
         <Paper className={classes.main} elevation={10}>
-          <AddressesInput handleAddressChange={this.handleAddressChange} />
+          <AddressesInput handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
           {this.state.directions  && <DirectionsTable steps={this.state.directions.steps} distance={this.state.directions.distance}  duration={this.state.directions.duration} origin={this.state.origin} destination={this.state.destination}  />} 
         </Paper>
       </div>
