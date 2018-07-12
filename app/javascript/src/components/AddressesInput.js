@@ -9,33 +9,31 @@ const styles = theme => ({
   root: {
     width: '100%',
     marginTop: theme.spacing.unit * 3,
-    //marginBottom: theme.spacing.unit * 3,
-
     overflowX: 'auto',
     paddingBottom: theme.spacing.unit * 3
   },
-    form: {
-      display: 'flex',
-     justifyContent: 'center',
-     flexDirection: 'column',
 
-    },
-    textField: {
-      width: 500,
-      margin: 'auto',
-      paddingTop: theme.spacing.unit * 2,
-      paddingBottom: theme.spacing.unit * 2,
+  form: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
 
+  },
+  textField: {
+    width: 500,
+    margin: 'auto',
+    paddingTop: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2,
+  },
 
+  menu: {
+    width: 200,
+  },
 
-    },
-    menu: {
-      width: 200,
-    },
-    button: {
-      margin: theme.spacing.unit,
-      marginLeft: 150,
-    }
+  button: {
+    margin: theme.spacing.unit,
+    marginLeft: 150,
+  }
   });
 
 
@@ -53,7 +51,7 @@ const styles = theme => ({
 
       render(){
           const {classes} = this.props
-
+          console.log(this.props)
           return(
             <Paper className={classes.root} >
               <form className={classes.form} noValidate>
@@ -61,15 +59,21 @@ const styles = theme => ({
                 <TextField
                 
                 label='Leaving From'
+                name='origin'
                 className={classes.textField}
+
                 margin='normal'
+                value={this.props.origin}
+                 onChange={this.props.handleAddressChange}
                 />
 
                 <TextField
-                
+                name='destination'
                 label="Ariving At"
                 className={classes.textField}
                 margin='normal'
+                value={this.props.destination}
+                onChange={this.props.handleAddressChange}
                 /> 
 
                 <Button onClick={this.props.handleSearchClick} variant="fab" color="primary" aria-label="search" className={classes.button}>
