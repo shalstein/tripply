@@ -11,9 +11,15 @@ class Direction
     def fetch_directions 
 
         response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}key={ENV[google_directions_key]}"
+
     
         @directions = JSON.parse(response.body)
-        parse_steps
+        
+        if @directions['error_message']
+             @directions
+        else
+            parse_steps
+        end
         
     end
 

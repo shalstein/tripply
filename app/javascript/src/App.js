@@ -44,11 +44,18 @@ class App extends Component {
   }
 
   handleSearchClick = (event, t) => {
+
     fetch(`/api/directions/?origin=${this.state.origin}&destination=${this.state.destination}`)
     .then(directions => directions.json())
     
-    .then(directions => this.setState({directions: directions}, (e) => console.log(this.state.directions))
-    )
+    .then(directions => { 
+      if (directions.error_message){
+        throw new Error(directions.error_message)
+      }
+      return this.setState({directions: directions}, (e) => console.log(this.state.directions))
+    })
+
+
     .catch(e => console.error(e))
   }
 
