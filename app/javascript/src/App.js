@@ -49,8 +49,8 @@ class App extends Component {
     .then(directions => directions.json())
     
     .then(directions => { 
-      if (directions.error_message){
-        throw new Error(directions.error_message)
+      if (directions.status !== 'OK'){
+        throw new Error(`API status: ${directions.status}`)
       }
       this.setState({directions: directions, origin: directions.origin, destination: directions.destination}, (e) => console.log(this.state.directions))
 

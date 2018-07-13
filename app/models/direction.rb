@@ -15,10 +15,10 @@ class Direction
     
         @directions = JSON.parse(response.body)
         
-        if @directions['error_message']
-             @directions
+        if @directions['status'] == 'OK'
+             @parse_steps
         else
-            parse_steps
+            {status: @directions['status']}
         end
         
     end
@@ -34,7 +34,7 @@ class Direction
         end
 
 
-        {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: sanitized_steps, destination: leg['end_address'],  origin: leg['start_address']}
+        {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: sanitized_steps, destination: leg['end_address'],  origin: leg['start_address'], status: @directions['status']}
 
     end
 

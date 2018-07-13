@@ -17,6 +17,7 @@ const styles = theme => ({
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
+    padding: theme.spacing.unit *2,
 
   },
   textField: {
@@ -24,10 +25,6 @@ const styles = theme => ({
     margin: 'auto',
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
-  },
-
-  menu: {
-    width: 200,
   },
 
   button: {
