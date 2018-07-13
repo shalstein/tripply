@@ -38,20 +38,10 @@ const styles = theme => ({
 
 
   class AddressesInput extends React.Component {
-      constructor(){
-        super()
-        this.state = {
-            starting: '',
-            ending: '',
-            directions: [],
-        }
-      }
-
 
 
       render(){
           const {classes} = this.props
-          console.log(this.props)
           return(
             <Paper className={classes.root} >
               <form className={classes.form} noValidate>

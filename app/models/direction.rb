@@ -34,7 +34,7 @@ class Direction
         end
 
 
-        {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: sanitized_steps}
+        {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: sanitized_steps, destination: leg['end_address'],  origin: leg['start_address']}
 
     end
 

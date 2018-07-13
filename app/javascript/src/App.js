@@ -52,7 +52,8 @@ class App extends Component {
       if (directions.error_message){
         throw new Error(directions.error_message)
       }
-      return this.setState({directions: directions}, (e) => console.log(this.state.directions))
+      this.setState({directions: directions, origin: directions.origin, destination: directions.destination}, (e) => console.log(this.state.directions))
+
     })
 
 
@@ -60,7 +61,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state)
     const {classes} = this.props
     return (
       <div className="App">
@@ -68,7 +68,7 @@ class App extends Component {
         <Typography className={classes.header} 
         variant='display2'  >Get a Weather Forecast For Your Next Road Trip</Typography>
         <Paper className={classes.main} elevation={10}>
-          <AddressesInput handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
+          <AddressesInput origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
           {this.state.directions  && <DirectionsTable steps={this.state.directions.steps} distance={this.state.directions.distance}  duration={this.state.directions.duration} origin={this.state.origin} destination={this.state.destination}  />} 
         </Paper>
       </div>
