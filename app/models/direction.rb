@@ -16,7 +16,7 @@ class Direction
         @directions = JSON.parse(response.body)
         
         if @directions['status'] == 'OK'
-             @parse_steps
+             parse_steps
         else
             {status: @directions['status']}
         end
