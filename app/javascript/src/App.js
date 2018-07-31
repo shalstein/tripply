@@ -33,9 +33,9 @@ class App extends Component {
   constructor(){
    super()
    this.state = {
-     directions: null,
-     origin: '',
-     destination: ''
+     directions: {"distance":"2.8 km","duration":"11 mins","steps":["Head \u003cb\u003esoutheast\u003c/b\u003e on \u003cb\u003eAvenue Greene\u003c/b\u003e toward \u003cb\u003eBoulevard de Maisonneuve O\u003c/b\u003e","Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eBoulevard Dorchester\u003c/b\u003e","Continue onto \u003cb\u003eBoulevard René-Lévesque O\u003c/b\u003e","Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eBoulevard Robert-Bourassa\u003c/b\u003e"],"destination":"Montreal, QC, Canada","origin":"1367 Avenue Greene, 1366 Avenue Greene, Westmount, QC H3Z 2A8, Canada","status":"OK"},
+     origin: "1367 Avenue Greene, 1366 Avenue Greene, Westmount, QC H3Z 2A8, Canada",
+     destination: "Montreal, QC, Canada",
    }
   }
 
@@ -68,7 +68,7 @@ class App extends Component {
         <Typography className={classes.header} 
         variant='display2'  >Get a Weather Forecast For Your Next Road Trip</Typography>
         <Paper className={classes.main} elevation={10}>
-          <AddressesInput origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
+          {this.state.directions === null && <AddressesInput origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>}
           {this.state.directions  && <DirectionsTable steps={this.state.directions.steps} distance={this.state.directions.distance}  duration={this.state.directions.duration} origin={this.state.origin} destination={this.state.destination}  />} 
         </Paper>
       </div>

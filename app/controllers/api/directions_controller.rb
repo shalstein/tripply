@@ -2,8 +2,6 @@ class Api::DirectionsController < ApplicationController
   def index
     directions = Direction.new(direction_params.to_h).fetch_directions
     
-
-    
     render json: directions 
   end
 

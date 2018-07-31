@@ -18,13 +18,13 @@ const styles = theme => ({
     minWidth: 700,
   },
   cell: {
-    padding: theme.spacing.unit * 5
+   padding: theme.spacing.unit * 3
   }
 });
 
 
 function DirectionsTable(props) {
-  const { classes, steps, duration, distance } = props;
+  const { classes, steps, duration, distance, origin, destination } = props;
 
     const rows = steps.map((direction, index) => (
         <DirectionRow key={index} direction={direction} />
@@ -37,6 +37,9 @@ function DirectionsTable(props) {
         <TableBody>
           <TableRow>
             <TableCell className={classes.cell}>
+            Leaving From: <Typography variant='title' > {origin} </Typography> <br />
+            Ariving To: <Typography variant='title' >{destination} </Typography> <br />
+
             <Typography >Distance: {distance} </Typography>
             <Typography >Duration: {duration} </Typography>
             </TableCell>

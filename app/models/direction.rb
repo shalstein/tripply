@@ -16,7 +16,8 @@ class Direction
         @directions = JSON.parse(response.body)
         
         if @directions['status'] == 'OK'
-             parse_steps
+            parse_steps
+
         else
             {status: @directions['status']}
         end
@@ -27,12 +28,6 @@ class Direction
 
     def parse_steps
         leg = @directions['routes'][0]['legs'][0]
-        #steps = leg['steps']
-        
-        
-        # sanitized_steps = steps.map do |step|
-        #     ActionView::Base.full_sanitizer.sanitize(step['html_instructions'])
-        # end
 
         steps = leg['steps'].map do |step|
             step['html_instructions']
