@@ -27,14 +27,19 @@ class Direction
 
     def parse_steps
         leg = @directions['routes'][0]['legs'][0]
-        steps = leg['steps']
+        #steps = leg['steps']
+        
+        
+        # sanitized_steps = steps.map do |step|
+        #     ActionView::Base.full_sanitizer.sanitize(step['html_instructions'])
+        # end
 
-        sanitized_steps = steps.map do |step|
-            ActionView::Base.full_sanitizer.sanitize(step['html_instructions'])
+        steps = leg['steps'].map do |step|
+            step['html_instructions']
         end
 
 
-        {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: sanitized_steps, destination: leg['end_address'],  origin: leg['start_address'], status: @directions['status']}
+        {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: steps, destination: leg['end_address'],  origin: leg['start_address'], status: @directions['status']}
 
     end
 

@@ -14,10 +14,8 @@ const DirectionsRow = props => {
     const { classes, direction } = props
     return(
     <TableRow>
-        <TableCell className={classes.cell}>
-            {direction}
-        </TableCell>
-    </TableRow>
+        <TableCell dangerouslySetInnerHTML={{__html: direction}} className={classes.cell} />
+     </TableRow>
 )}
 
 export default withStyles(styles)(DirectionsRow);
