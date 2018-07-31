@@ -52,7 +52,7 @@ class App extends Component {
       if (directions.status !== 'OK'){
         throw new Error(`API status: ${directions.status}`)
       }
-      this.setState({directions: directions, origin: directions.origin, destination: directions.destination}, (e) => console.log(this.state.directions))
+      this.setState({directions: directions, origin: directions.origin, destination: directions.destination})
 
     })
 
@@ -64,9 +64,9 @@ class App extends Component {
     const {classes} = this.props
     return (
       <div className="App">
-        <AppBar/>
+        <AppBar isDirections={!!this.state.directions} />
         <Typography className={classes.header} 
-        variant='display2'  >Get a Weather Forecast For Your Next Road Trip</Typography>
+        variant='display2'  >{this.state.directions == null ? "Get a Weather Forecast For Your Next Road Trip" : "Your Directions"}</Typography>
         <Paper className={classes.main} elevation={10}>
           {this.state.directions === null && <AddressesInput origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>}
           {this.state.directions  && <DirectionsTable steps={this.state.directions.steps} distance={this.state.directions.distance}  duration={this.state.directions.duration} origin={this.state.origin} destination={this.state.destination}  />} 
