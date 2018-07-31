@@ -16,7 +16,7 @@ const styles = {
 };
 
 function appBar(props) {
-  const { classes, isDirections } = props;
+  const { classes, isDirections, handleNewSearchClick } = props;
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
@@ -24,7 +24,7 @@ function appBar(props) {
           <Typography className= {classes.flex} variant="headline" color="primary">
             Tripply
           </Typography>
-         { isDirections && <Button  color='inherit'>New Search</Button>}
+         { isDirections && <Button  color='inherit' onClick={handleNewSearchClick}>New Search</Button>}
         </Toolbar>
       </AppBar>
     </div>
