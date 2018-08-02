@@ -5,17 +5,14 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
 
-    cell: {
-      padding: theme.spacing.unit * 4,
-      borderRight: '1px solid rgb(224, 224, 224)',
-    },
-    weatherCell: {
-      minWidth: '10em',
-      borderTop: '1px solid rgb(224, 224, 224)',
-      borderBottom: 'none',
-
-
-
+     cell: {
+        padding: theme.spacing.unit * 4,
+        borderRight: '1px solid rgb(224, 224, 224)',
+     },
+     weatherCell: {
+        minWidth: '10em',
+        borderTop: '1px solid rgb(224, 224, 224)',
+        borderBottom: 'none',
     }
   });
 
