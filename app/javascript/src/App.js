@@ -6,6 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import DirectionsTable from './components/directionsTable';
 import Paper from '@material-ui/core/Paper'
+import devResponse from './devResponse'
 
 const styles = theme => ({
 
@@ -33,7 +34,7 @@ class App extends Component {
   constructor(){
    super()
    this.state = {
-     directions: {"distance":"2.8 km","duration":"11 mins","steps":["Head \u003cb\u003esoutheast\u003c/b\u003e on \u003cb\u003eAvenue Greene\u003c/b\u003e toward \u003cb\u003eBoulevard de Maisonneuve O\u003c/b\u003e","Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eBoulevard Dorchester\u003c/b\u003e","Continue onto \u003cb\u003eBoulevard René-Lévesque O\u003c/b\u003e","Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eBoulevard Robert-Bourassa\u003c/b\u003e"],"destination":"Montreal, QC, Canada","origin":"1367 Avenue Greene, 1366 Avenue Greene, Westmount, QC H3Z 2A8, Canada","status":"OK"},
+     directions: devResponse ,
      origin: '',
      destination: '',
    }
@@ -65,7 +66,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state)
     const {classes} = this.props
     return (
       <div className="App">

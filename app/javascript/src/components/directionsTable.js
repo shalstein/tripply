@@ -4,6 +4,8 @@ import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
+import TableHead from '@material-ui/core/TableHead';
+
 import Paper from '@material-ui/core/Paper';
 import DirectionRow from './directionsRow'
 import { Typography } from '@material-ui/core';
@@ -37,11 +39,11 @@ function DirectionsTable(props) {
         <TableBody>
           <TableRow>
             <TableCell className={classes.cell}>
-            Leaving From: <Typography variant='title' > {origin} </Typography> <br />
-            Ariving To: <Typography variant='title' >{destination} </Typography> <br />
+              Leaving From: <Typography variant='title' > {origin} </Typography> <br />
+              Ariving To: <Typography variant='title' >{destination} </Typography> <br />
 
-            <Typography >Distance: {distance} </Typography>
-            <Typography >Duration: {duration} </Typography>
+              <Typography >Distance: {distance} </Typography>
+              <Typography >Duration: {duration} </Typography>
             </TableCell>
           </TableRow>
           
