@@ -52,7 +52,7 @@ class App extends Component {
       if (directions.status !== 'OK'){
         throw new Error(`API status: ${directions.status}`)
       }
-      this.setState({directions: directions, origin: directions.origin, destination: directions.destination})
+      this.setState({directions: directions, origin: directions.origin, destination: directions.destination}, () => console.log(this.state))
 
     })
 

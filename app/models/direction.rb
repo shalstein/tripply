@@ -12,7 +12,6 @@ class Direction
 
         response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}key={ENV[google_directions_key]}"
 
-    
         @directions = JSON.parse(response.body)
         
         if @directions['status'] == 'OK'
@@ -29,37 +28,37 @@ class Direction
     def parse_steps
         leg = @directions['routes'][0]['legs'][0]
         meter_counter = 0
+        puts leg['steps'][2]
 
         steps = leg['steps'].map do |step|
-            if meter_counter >= 1000 
+            if meter_counter >= 100000 || step['distance']['value'] >=  100000
+                puts 'meter counter is greater than 100000'
                 weather = get_weather(step['end_location'])
                 meter_counter = 0
                 {html_instructions: step['html_instructions'], duration: step['duration']['text'], weather: weather}
             else
-                meter_counter += step['duration']['value']
+                meter_counter += step['distance']['value']
                 {html_instructions: step['html_instructions'], duration: step['duration']['text']}
             end
         end
-        
+
+        steps[0]['weather'] = get_weather(leg['steps'][0]['end_location'])        
 
         {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: steps, destination: leg['end_address'],  origin: leg['start_address'], status: @directions['status']}
 
     end
 
-
-
-
     def get_weather(coordinates)
-    binding.pry
-     response = Faraday.get("https://api.openweathermap.org/data/2.5/weather?lat=#{coordinates['lat']}&lon=#{coordinates['lng']}&APPID=#{ENV['WEATHER_API_KEY']}&units=metric")
+        response = Faraday.get("https://api.openweathermap.org/data/2.5/weather?lat=#{coordinates['lat']}&lon=#{coordinates['lng']}&APPID=#{ENV['WEATHER_API_KEY']}&units=metric")
 
-     weather = JSON.parse(response.body)
+        weather = JSON.parse(response.body)
+        puts weather
 
-     {weather: weather['weather'][0], temp: weather['main']['temp'], visibility: weather['visibility']}
-
+        {weather: weather['weather'][0], temp: weather['main']['temp'], visibility: weather['visibility']}
     end
 
+    def step_with_weather(step)
 
-
+    end
 end
 
