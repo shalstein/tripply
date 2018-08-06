@@ -1,3 +1,5 @@
+require 'google_maps_service'
+
 class Direction 
     include ActiveModel::Model
 
@@ -5,14 +7,25 @@ class Direction
 
     def initialize(addresses_hash)
         @origin = addresses_hash['origin'] 
-        @destination = addresses_hash['destination'] 
+        @destination = addresses_hash['destination']
+        #gmaps = GoogleMapsService::Client.new(key: ENV['google_directions_key'])        
     end
 
     def fetch_directions 
 
         response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}key={ENV[google_directions_key]}"
 
+
+            
+
         @directions = JSON.parse(response.body)
+
+        open('google_dir.json', 'w') do |f|
+            f.puts @directions.to_json 
+          end
+
+        
+        binding.pry
         
         if @directions['status'] == 'OK'
             parse_steps
@@ -22,6 +35,8 @@ class Direction
         end
         
     end
+
+
 
     private
 
