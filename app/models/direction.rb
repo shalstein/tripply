@@ -1,4 +1,4 @@
-require 'google_maps_service'
+require 'google_maps_service/polyline'
 
 class Direction 
     include ActiveModel::Model
@@ -16,17 +16,13 @@ class Direction
         response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}key={ENV[google_directions_key]}"
 
 
-            
-
         @directions = JSON.parse(response.body)
 
-        open('google_dir.json', 'w') do |f|
-            f.puts @directions.to_json 
-          end
+        # open('google_dir.json', 'w') do |f|
+        #     f.puts @directions.to_json 
+        #   end
 
-        
-        binding.pry
-        
+                
         if @directions['status'] == 'OK'
             parse_steps
 
@@ -45,8 +41,25 @@ class Direction
         meter_counter = 0
         puts leg['steps'][2]
 
+
+
+
+        binding.pry
+        
+
         steps = leg['steps'].map do |step|
             if meter_counter >= 100000 || step['distance']['value'] >=  100000
+
+                polyline = step['polyline']['points']
+                path = GoogleMapsService::Polyline.decode(polyline)
+
+                start_point = path[0]
+                path.each do |point|
+
+                end
+
+                SephericalUtil.computeDistanceBetween()
+
                 puts 'meter counter is greater than 100000'
                 weather = get_weather(step['end_location'])
                 meter_counter = 0

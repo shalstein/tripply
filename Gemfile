@@ -57,7 +57,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
   gem 'pry'
-  gem 'pry-rails'
+  #gem 'pry-rails'
+  # gem  'pry-nav'
   gem 'pry-doc'
 end
 
