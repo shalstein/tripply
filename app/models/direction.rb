@@ -13,9 +13,8 @@ class Direction
 
     def fetch_directions 
 
-        response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}key={ENV[google_directions_key]}"
-
-
+        response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}&key=#{ENV['google_directions_key']}"
+        
         @directions = JSON.parse(response.body)
 
         # open('google_dir.json', 'w') do |f|
@@ -39,38 +38,34 @@ class Direction
     def parse_steps
         leg = @directions['routes'][0]['legs'][0]
         meter_counter = 0
-        puts leg['steps'][2]
-
-
-
-
-        binding.pry
-        
 
         steps = leg['steps'].map do |step|
-            if meter_counter >= 100000 || step['distance']['value'] >=  100000
-
+            if (meter_counter + step['distance']['value']) >= 100000
                 polyline = step['polyline']['points']
-                path = GoogleMapsService::Polyline.decode(polyline)
+                points = GoogleMapsService::Polyline.decode(polyline)
+                weather = {}
+                points_distance = 0
 
-                start_point = path[0]
-                path.each do |point|
+                (points.length - 1).times do |index|
+                   points_distance += SphericalUtil.computeDistanceBetween(points[index], points[index + 1])
+                    if (points_distance + meter_counter) >= 100000    
+                        puts 'meter counter is greater than 100000'                        
+                        point_weather = get_weather(points[index + 1].stringify_keys)
+                        meter_counter = 0
+                        points_distance = 0
+                        weather = point_weather
+                    end
+                end 
 
-                end
-
-                SephericalUtil.computeDistanceBetween()
-
-                puts 'meter counter is greater than 100000'
-                weather = get_weather(step['end_location'])
-                meter_counter = 0
-                {html_instructions: step['html_instructions'], duration: step['duration']['text'], weather: weather}
+                meter_counter += points_distance
+                {html_instructions: step['html_instructions'], duration: step['duration']['text'], weather: weather}               
             else
                 meter_counter += step['distance']['value']
                 {html_instructions: step['html_instructions'], duration: step['duration']['text']}
             end
         end
 
-        steps[0]['weather'] = get_weather(leg['steps'][0]['end_location'])        
+        steps[0]['weather'] = get_weather(leg['steps'][0]['start_location'])        
 
         {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: steps, destination: leg['end_address'],  origin: leg['start_address'], status: @directions['status']}
 

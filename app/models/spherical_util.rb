@@ -37,12 +37,12 @@ class SphericalUtil
         arcHav(havDistance(lat1, lat2, lng1 - lng2))
     end
 
-    def self.computeAngleBetween(from_lat_lng,to_lat_lng) 
-        distanceRadians(toRadians(from.latitude), toRadians(from.longitude),toRadians(to.latitude), toRadians(to.longitude))
+    def self.computeAngleBetween(from,to) 
+        distanceRadians(toRadians(from[:lat]), toRadians(from[:lng]),toRadians(to[:lat]), toRadians(to[:lng]))
     end
 
     def self.computeDistanceBetween(from_lat_lng, to_lat_lng)
-        computeAngleBetween(from, to) * EARTH_RADIUS;
+        computeAngleBetween(from_lat_lng, to_lat_lng) * EARTH_RADIUS;
     end
 
     #Math Utils
@@ -54,7 +54,7 @@ class SphericalUtil
     end
 
 
-    def self.arcHave(x)
+    def self.arcHav(x)
         2 * Math.asin(Math.sqrt(x))
     end
 
