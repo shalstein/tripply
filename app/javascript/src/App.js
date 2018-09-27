@@ -34,9 +34,9 @@ class App extends Component {
   constructor(){
    super()
    this.state = {
-     directions: null ,
-     origin: '',
-     destination: '',
+     directions: devResponse ,
+     origin: 'yups',
+     destination: 'toma',
    }
   }
 
