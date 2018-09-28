@@ -20,12 +20,19 @@ const styles = theme => ({
   });
 
 const DirectionsRow = props => {
-    const { classes, direction } = props
+  const { classes, direction } = props
+
+
     return(
     <TableRow>
         <TableCell scope='row' component='th'  className={classes.cell} >
           <Direction html_instructions={{__html: direction.html_instructions}} />
-          {direction.weather && <Weather weatherData={direction.weather} /> }
+          {direction.weather && direction.weather.map((report, index) => {
+            return (
+                <Weather  weatherReport={report} key={index} />
+              )
+            }) 
+          }
 
         </TableCell>
         

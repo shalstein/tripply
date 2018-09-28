@@ -6,7 +6,9 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import DirectionsTable from './components/directionsTable';
 import Paper from '@material-ui/core/Paper'
-import devResponse from './devResponse'
+import responseDev from './responseDev'
+import Grid from '@material-ui/core/Grid';
+
 
 const styles = theme => ({
 
@@ -34,9 +36,9 @@ class App extends Component {
   constructor(){
    super()
    this.state = {
-     directions: devResponse ,
-     origin: 'yups',
-     destination: 'toma',
+     directions: responseDev ,
+     origin: 'Orange CT',
+     destination: '07960',
    }
   }
 
@@ -67,15 +69,31 @@ class App extends Component {
 
   render() {
     const {classes} = this.props
+
+    let currentComponent = <AddressesInput origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
+
+    if (this.state.directions) {
+       currentComponent = <DirectionsTable steps={this.state.directions.steps} distance={this.state.directions.distance}  duration={this.state.directions.duration} origin={this.state.directions.origin} destination={this.state.directions.destination}  />
+    }
+
+
     return (
       <div className="App">
         <AppBar isDirections={!!this.state.directions} handleNewSearchClick={this.handleNewSearchClick} />
         <Typography className={classes.header} 
         variant='display2'  >{this.state.directions == null ? "Get a Weather Forecast For Your Next Road Trip" : "Your Directions"}</Typography>
-        <Paper className={classes.main} elevation={10}>
-          {this.state.directions === null && <AddressesInput origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>}
-          {this.state.directions  && <DirectionsTable steps={this.state.directions.steps} distance={this.state.directions.distance}  duration={this.state.directions.duration} origin={this.state.directions.origin} destination={this.state.directions.destination}  />} 
-        </Paper>
+
+            <Grid container className={null} justify="center" spacing={40}>
+              <Grid item>
+                <Paper className={classes.main} elevation={10}>
+                    {currentComponent}
+                </Paper>
+              </Grid>
+            </Grid>
+
+
+
+
       </div>
     );
   }

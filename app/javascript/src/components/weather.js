@@ -17,8 +17,8 @@ const styles = theme => ({
 })
 
 
-const weather = ({weatherData, classes}) => {
-    const { weather, temp, visibility} = weatherData;
+const weather = ({weatherReport, classes}) => {
+    const { weather, temp, visibility} = weatherReport;
     
     return (
         <div className={classes.container} >
