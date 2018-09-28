@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import TableRow from '@material-ui/core/TableRow';
 
 const styles = theme => ({
     container: {
@@ -17,17 +18,17 @@ const styles = theme => ({
 })
 
 
-const weather = ({weatherReport, classes}) => {
+const weather = ({weatherReport}) => {
     const { weather, temp, visibility} = weatherReport;
     
     return (
-        <div className={classes.container} >
+        <TableRow className={classes.container} >
             <h4 className={classes.header} >Weather</h4>
             <img src={`http://openweathermap.org/img/w/${weather.icon}.png`} />
             <div>{weather.description}</div>
             <div>Temparture: {temp} ℃ </div>
             <div>Visibility: {visibility}</div>
-        </div>
+        </TableRow>
     )
 }
 
