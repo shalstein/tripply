@@ -8,7 +8,7 @@ import DirectionsTable from './components/directionsTable';
 import Paper from '@material-ui/core/Paper'
 import responseDev from './responseDev'
 import Grid from '@material-ui/core/Grid';
-
+import TripInfo from './components/tripInfo';
 
 const styles = theme => ({
 
@@ -39,6 +39,7 @@ class App extends Component {
      directions: responseDev ,
      origin: 'Orange CT',
      destination: '07960',
+     weather: {},
    }
   }
 
@@ -49,13 +50,13 @@ class App extends Component {
   handleSearchClick = (event, t) => {
 
     fetch(`/api/directions/?origin=${this.state.origin}&destination=${this.state.destination}`)
-    .then(directions => directions.json())
+    .then(response => response.json())
     
     .then(directions => { 
-      if (directions.status !== 'OK'){
+      if (directions.directions.status !== 'OK'){
         throw new Error(`API status: ${directions.status}`)
       }
-      this.setState({directions: directions, origin: directions.origin, destination: directions.destination}, () => console.log(this.state))
+      this.setState({directions: directions, weather: weather}, () => console.log(this.state))
 
     })
 
@@ -73,7 +74,7 @@ class App extends Component {
     let currentComponent = <AddressesInput origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
 
     if (this.state.directions) {
-       currentComponent = <DirectionsTable steps={this.state.directions.steps} distance={this.state.directions.distance}  duration={this.state.directions.duration} origin={this.state.directions.origin} destination={this.state.directions.destination}  />
+       currentComponent = <TripInfo   />
     }
 
 

@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
+// import TableRow from '@material-ui/core/TableRow';
 import TableHead from '@material-ui/core/TableHead';
 
 import Paper from '@material-ui/core/Paper';
@@ -26,8 +26,8 @@ const styles = theme => ({
 });
 
 
-function DirectionsTable(props) {
-  const { classes, steps, duration, distance, origin, destination } = props;
+function DirectionsTable({origin, destination, duration, distance, steps,classes}) {
+  // const { classes, steps, duration, distance, origin, destination } = props;
 
     const rows = steps.map((direction, index) => (
         <DirectionRow key={index} direction={direction} />
