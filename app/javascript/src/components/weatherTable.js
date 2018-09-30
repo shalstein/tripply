@@ -1,8 +1,10 @@
 import React from 'react';
 import Table from '@material-ui/core/Table';
 import WeatherRow from './weatherRow';
+import Paper from '@material-ui/core/Paper';
+import TableBody from '@material-ui/core/TableBody';
 
-function DirectionsTable({weatherReports}) {
+function weatherTable({weatherReports}) {
   
       const rows = weatherReports.map((report, index) => (
           <WeatherRow key={index} report={report} />
@@ -10,8 +12,8 @@ function DirectionsTable({weatherReports}) {
   
   
     return (
-      <Paper className={classes.root}>
-        <Table className={classes.table}>
+      <Paper >
+        <Table>
           <TableBody>
             {rows}
           </TableBody>
@@ -19,4 +21,6 @@ function DirectionsTable({weatherReports}) {
       </Paper>
     );
   }
+
+  export default weatherTable
   

@@ -6,7 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import DirectionsTable from './components/directionsTable';
 import Paper from '@material-ui/core/Paper'
-import responseDev from './responseDev'
+import responseDev from './responseDevV2'
 import Grid from '@material-ui/core/Grid';
 import TripInfo from './components/tripInfo';
 
@@ -52,11 +52,11 @@ class App extends Component {
     fetch(`/api/directions/?origin=${this.state.origin}&destination=${this.state.destination}`)
     .then(response => response.json())
     
-    .then(directions => { 
-      if (directions.directions.status !== 'OK'){
+    .then(tripData => { 
+      if (tripData.directions.status !== 'OK'){
         throw new Error(`API status: ${directions.status}`)
       }
-      this.setState({directions: directions, weather: weather}, () => console.log(this.state))
+      this.setState({directions: tripData.directions, weather: tripData.weather}, () => console.log(this.state))
 
     })
 
@@ -74,7 +74,7 @@ class App extends Component {
     let currentComponent = <AddressesInput origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
 
     if (this.state.directions) {
-       currentComponent = <TripInfo   />
+       currentComponent = <TripInfo directions={this.state.directions} weather={this.state.directions.weather}   />
     }
 
 
