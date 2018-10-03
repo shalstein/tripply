@@ -7,7 +7,6 @@ const styles = theme => ({
 
      cell: {
         padding: theme.spacing.unit * 4,
-        borderRight: '1px solid rgb(224, 224, 224)',
      },
   });
 
