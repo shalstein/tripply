@@ -6,7 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import DirectionsTable from './components/directionsTable';
 import Paper from '@material-ui/core/Paper'
-import responseDev from './responseDevV2'
+import responseDev from './responseDevV3'
 import Grid from '@material-ui/core/Grid';
 import TripInfo from './components/tripInfo';
 

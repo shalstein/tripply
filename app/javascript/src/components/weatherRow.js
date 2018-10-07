@@ -23,14 +23,14 @@ const styles = theme => ({
 
 
 const weather = ({report, classes}) => {
-    const { weather, temp, visibility} = report;
+    const { city_name, description, icon, temp, visibility} = report;
     
     return (
         <TableRow className={classes.container} >
             <TableCell className={classes.cell}>
-                <p className={classes.header} >Weather</p>
-                <img src={`http://openweathermap.org/img/w/${weather.icon}.png`} />
-                <div>{weather.description}</div>
+                <p className={classes.header} >Weather in {city_name}</p>
+                <img src={`http://openweathermap.org/img/w/${icon}.png`} />
+                <div>{description}</div>
                 <div>Temparture: {temp} ℃ </div>
                 <div>Visibility: {visibility}</div>
             </TableCell>

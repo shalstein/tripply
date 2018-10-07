@@ -49,8 +49,8 @@ class Direction
 
                 (points.length - 1).times do |index|
                    points_distance += SphericalUtil.computeDistanceBetween(points[index], points[index + 1])
-                    if (points_distance + meter_counter) >= 100000    
-                        puts 'meter counter is greater than 100000'                        
+                    if (points_distance + meter_counter) >= 100000
+                        puts 'meter counter is greater than 100000'
                        
                         meter_counter = 0
                         points_distance = 0
@@ -68,17 +68,20 @@ class Direction
 
         weatherReports.prepend(get_weather(leg['steps'][0]['start_location']) )
 
-       { weather: weatherReports, directions: {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: steps, destination: leg['end_address'],  origin: leg['start_address'], status: directions['status'] }
-}
+       { weather: weatherReports, directions: {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: steps, destination: leg['end_address'],  origin: leg['start_address'], status: directions['status'] }}
     end
 
     def get_weather(coordinates)
         response = Faraday.get("https://api.openweathermap.org/data/2.5/weather?lat=#{coordinates['lat']}&lon=#{coordinates['lng']}&APPID=#{ENV['WEATHER_API_KEY']}&units=metric")
-
+        # counter = 0
+        # if counter < 3
+        #     open('weatherRes.json', 'w') do |f|
+        #     f.puts response.body.to_json 
+        #     counter += 1
+        #     end
+        # end
         weather = JSON.parse(response.body)
-        puts weather
-
-        {weather: weather['weather'][0], temp: weather['main']['temp'], visibility: weather['visibility']}
+        { temp: weather['main']['temp'], visibility: weather['visibility'], city_name: weather['name']}.merge(weather['weather'][0])
     end
 
     def step_with_weather(step)
