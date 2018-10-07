@@ -28,7 +28,6 @@ const styles = theme => ({
 
 
 function DirectionsTable({classes, directions}) {
-  console.log(directions)
   const {origin, destination, duration, distance, steps,} = directions;
 
 

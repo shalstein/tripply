@@ -34,10 +34,10 @@ class App extends Component {
   constructor(){
    super()
    this.state = {
-     directions: responseDev ,
-     origin: 'Orange CT',
-     destination: '07960',
-     weather: {},
+     directions: null ,
+     origin: '',
+     destination: '',
+     weather: [],
    }
   }
 
@@ -54,7 +54,8 @@ class App extends Component {
       if (tripData.directions.status !== 'OK'){
         throw new Error(`API status: ${directions.status}`)
       }
-      this.setState({directions: tripData.directions, weather: tripData.weather}, () => console.log(this.state))
+      console.log('clicked')
+      this.setState({directions: tripData.directions, weather: tripData.weather})
 
     })
 
@@ -72,7 +73,7 @@ class App extends Component {
     let currentComponent = <AddressesInput origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
 
     if (this.state.directions) {
-       currentComponent = <TripInfo directions={this.state.directions} weather={this.state.directions.weather}   />
+       currentComponent = <TripInfo directions={this.state.directions} weather={this.state.weather}   />
     }
 
 

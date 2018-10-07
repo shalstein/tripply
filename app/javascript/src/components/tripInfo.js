@@ -5,12 +5,11 @@ import WeatherTable from './weatherTable';
 import Paper from '@material-ui/core/Paper';
 
 const tripInfo = ({directions, weather}) => {
-    console.log(weather)
     return(
         <Grid container className={null} justify="center" spacing={40}>
             <Grid item>
                 <Paper  elevation={10}>
-                    <DirectionsTable directions={directions.directions} />
+                    <DirectionsTable directions={directions} />
                 </Paper>
             </Grid>
 
