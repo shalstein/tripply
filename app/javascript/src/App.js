@@ -53,9 +53,7 @@ class App extends Component {
       if (tripData.directions.status !== 'OK'){
         throw new Error(`API status: ${directions.status}`)
       }
-      console.log('clicked')
       this.setState({directions: tripData.directions, weather: tripData.weather})
-
     })
 
 
@@ -89,10 +87,6 @@ class App extends Component {
                 </Paper>
               </Grid>
             </Grid>
-
-
-
-
       </div>
     );
   }

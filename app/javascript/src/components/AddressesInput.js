@@ -29,7 +29,6 @@ const styles = theme => ({
 
   button: {
     margin: theme.spacing.unit,
-    marginLeft: 150,
   }
   });
 

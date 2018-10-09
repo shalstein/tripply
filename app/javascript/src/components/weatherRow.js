@@ -29,7 +29,7 @@ const weather = ({report, classes}) => {
         <TableRow className={classes.container} >
             <TableCell className={classes.cell}>
                 <p className={classes.header} >Weather in {city_name}</p>
-                <img src={`http://openweathermap.org/img/w/${icon}.png`} />
+                <img src={`https://openweathermap.org/img/w/${icon}.png`} />
                 <div>{description}</div>
                 <div>Temparture: {temp} ℃ </div>
                 <div>Visibility: {visibility}</div>
