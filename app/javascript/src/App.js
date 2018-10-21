@@ -8,6 +8,7 @@ import DirectionsTable from './components/directionsTable';
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid';
 import TripInfo from './components/tripInfo';
+import DevResponse from './responseDevV3.js'
 
 const styles = theme => ({
 
@@ -32,8 +33,9 @@ const styles = theme => ({
 class App extends Component {
   constructor(){
    super()
+   this.dummyData = DevResponse;
    this.state = {
-     directions: null ,
+     directions: this.dummyData.directions ,
      origin: '',
      destination: '',
      weather: [],
@@ -80,7 +82,7 @@ class App extends Component {
         <Typography className={classes.header} 
         variant='display2'  >{this.state.directions == null ? "Get a Weather Forecast For Your Next Road Trip" : "Your Directions"}</Typography>
 
-            <Grid container className={null} justify="center" spacing={40}>
+            <Grid container className={null} justify="left" spacing={40}>
               <Grid item>
                 <Paper className={classes.main} elevation={10}>
                     {currentComponent}

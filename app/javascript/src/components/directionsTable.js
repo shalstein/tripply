@@ -19,7 +19,6 @@ const styles = theme => ({
 
   },
   table: {
-    minWidth: 700,
   },
   cell: {
    padding: theme.spacing.unit * 3
