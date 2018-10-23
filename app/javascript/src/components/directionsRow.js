@@ -6,7 +6,6 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
 
      cell: {
-        padding: theme.spacing.unit * 4,
      },
   });
 

@@ -12,17 +12,7 @@ import DirectionRow from './directionsRow'
 import { Typography } from '@material-ui/core';
 
 const styles = theme => ({
-  root: {
-    width: '100%',
-    marginTop: theme.spacing.unit * 3,
-    overflow: 'hidden',
 
-  },
-  table: {
-  },
-  cell: {
-   padding: theme.spacing.unit * 3
-  }
 });
 
 
@@ -36,7 +26,6 @@ function DirectionsTable({classes, directions}) {
 
 
   return (
-    <Paper className={classes.root}>
       <Table className={classes.table}>
         <TableBody>
           <TableRow>
@@ -54,7 +43,6 @@ function DirectionsTable({classes, directions}) {
             
         </TableBody>
       </Table>
-    </Paper>
   );
 }
 

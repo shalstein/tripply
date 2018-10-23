@@ -20,11 +20,8 @@ const styles = theme => ({
 
   },
   main: {
-    flexGrow: 1,
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 3,
+    backgroundColor: '#ededee',
+    width: '25%',
   },
 
 })
@@ -82,11 +79,9 @@ class App extends Component {
         <Typography className={classes.header} 
         variant='display2'  >{this.state.directions == null ? "Get a Weather Forecast For Your Next Road Trip" : "Your Directions"}</Typography>
 
-            <Grid container className={null} justify="left" spacing={40}>
+            <Grid container className={classes.main} >
               <Grid item>
-                <Paper className={classes.main} elevation={10}>
                     {currentComponent}
-                </Paper>
               </Grid>
             </Grid>
       </div>
