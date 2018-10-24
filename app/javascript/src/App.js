@@ -20,8 +20,7 @@ const styles = theme => ({
 
   },
   main: {
-    backgroundColor: '#ededee',
-    width: '25%',
+    width: '100%',
   },
 
 })
@@ -79,11 +78,8 @@ class App extends Component {
         <Typography className={classes.header} 
         variant='display2'  >{this.state.directions == null ? "Get a Weather Forecast For Your Next Road Trip" : "Your Directions"}</Typography>
 
-            <Grid container className={classes.main} >
-              <Grid item>
-                    {currentComponent}
-              </Grid>
-            </Grid>
+          {currentComponent}
+             
       </div>
     );
   }

@@ -12,7 +12,10 @@ import DirectionRow from './directionsRow'
 import { Typography } from '@material-ui/core';
 
 const styles = theme => ({
-
+  table: {
+    width: '100%',
+    backgroundColor: '#ededee',
+  }
 });
 
 

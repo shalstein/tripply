@@ -5,22 +5,29 @@ import Map from './map';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
-    width: '25%',
+    root: {
+        flexGrow: 1,
+    }
 });
 
-const tripInfo = ({directions, weather}) => {
+const tripInfo = ({directions, weather, classes}) => {
     return(
+        <div className={classes.root} >
         <Grid container  >
-            <Grid item>
+            <Grid item xs={3}>
                     <DirectionsTable directions={directions} />
             </Grid>
-            <Map googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1mGcbKQbw2QUvp2k8UtNafT5q90cE-ww&v=3.exp&libraries=geometry,drawing,places"
+
+            <Grid item xs={9} >
+            <Map googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1mGcbKQbw2QUvp2k8UtNafT5q90cE-wwXXX&v=3.exp&libraries=geometry,drawing,places"
               loadingElement={<div style={{ height: `500px` }} />}
-              containerElement={<div style={{ height: `400px`, width: '400px' }} />}
-              mapElement={<div style={{ height: `500px` }} />}  
+              containerElement={<div style={{ height: `50%`, width: '100%' }} />}
+              mapElement={<div style={{ height: `100%`, width: '100%' }} />}  
               isMarkerShown={true}
             />
+            </Grid >
         </Grid>
+        </div>
     )
 }
 
