@@ -13,8 +13,12 @@ import { Typography } from '@material-ui/core';
 
 const styles = theme => ({
   table: {
-    width: '100%',
     backgroundColor: '#ededee',
+    height: '100%',
+    overflow: 'scroll',
+  },
+  cell: {
+    padding: theme.spacing.unit * 3, 
   }
 });
 

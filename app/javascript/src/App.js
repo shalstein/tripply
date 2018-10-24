@@ -22,8 +22,11 @@ const styles = theme => ({
   main: {
     width: '100%',
   },
-
-})
+    app: {
+      height: '100%',
+    },
+  }
+)
 
 
 class App extends Component {
@@ -73,10 +76,10 @@ class App extends Component {
 
 
     return (
-      <div className="App">
+      <div className={classes.app}>
         <AppBar isDirections={!!this.state.directions} handleNewSearchClick={this.handleNewSearchClick} />
-        <Typography className={classes.header} 
-        variant='display2'  >{this.state.directions == null ? "Get a Weather Forecast For Your Next Road Trip" : "Your Directions"}</Typography>
+        {this.state.directions === null && <Typography className={classes.header} 
+        variant='display2' >Get a Weather Forecast For Your Next Road Trip</Typography>}
 
           {currentComponent}
              
