@@ -1,0 +1,661 @@
+{
+    "geocoded_waypoints": [
+        {
+            "geocoder_status": "OK",
+            "place_id": "ChIJc431mOVjwokRVCfW72QG09s",
+            "types": [
+                "postal_code"
+            ]
+        },
+        {
+            "geocoder_status": "OK",
+            "place_id": "ChIJb-QyUPmjw4kRNKwzw3Kgjd4",
+            "types": [
+                "postal_code"
+            ]
+        }
+    ],
+    "routes": [
+        {
+            "bounds": {
+                "northeast": {
+                    "lat": 40.9089282,
+                    "lng": -73.72264899999999
+                },
+                "southwest": {
+                    "lat": 40.690143,
+                    "lng": -74.5125432
+                }
+            },
+            "copyrights": "Map data ©2018 Google",
+            "legs": [
+                {
+                    "distance": {
+                        "text": "59.4 mi",
+                        "value": 95653
+                    },
+                    "duration": {
+                        "text": "1 hour 16 mins",
+                        "value": 4586
+                    },
+                    "end_address": "Morristown, NJ 07960, USA",
+                    "end_location": {
+                        "lat": 40.7791922,
+                        "lng": -74.5125432
+                    },
+                    "start_address": "Jamaica, NY 11411, USA",
+                    "start_location": {
+                        "lat": 40.6929824,
+                        "lng": -73.7389724
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "0.5 mi",
+                                "value": 852
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 92
+                            },
+                            "end_location": {
+                                "lat": 40.690143,
+                                "lng": -73.72958799999999
+                            },
+                            "html_instructions": "Head <b>east</b> on <b>118th Ave</b> toward <b>223rd St</b>",
+                            "polyline": {
+                                "points": "czjwFpcaaMd@_Cv@sDr@mDt@oDr@kDr@mDr@mDt@oDr@mDr@mDt@mD"
+                            },
+                            "start_location": {
+                                "lat": 40.6929824,
+                                "lng": -73.7389724
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "364 ft",
+                                "value": 111
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 33
+                            },
+                            "end_location": {
+                                "lat": 40.6910678,
+                                "lng": -73.7291059
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>233rd St</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "khjwF|h_aMyD_B"
+                            },
+                            "start_location": {
+                                "lat": 40.690143,
+                                "lng": -73.72958799999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 mi",
+                                "value": 255
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 68
+                            },
+                            "end_location": {
+                                "lat": 40.6905968,
+                                "lng": -73.72614469999999
+                            },
+                            "html_instructions": "Turn <b>right</b> at the 1st cross street onto <b>Linden Blvd</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "enjwF|e_aMHm@Dm@Fs@Di@LaBJsADYDg@Fg@B]Di@Fo@"
+                            },
+                            "start_location": {
+                                "lat": 40.6910678,
+                                "lng": -73.7291059
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "46 ft",
+                                "value": 14
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 3
+                            },
+                            "end_location": {
+                                "lat": 40.6907189,
+                                "lng": -73.7261477
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>Parkway Dr</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "gkjwFjs~`MW@"
+                            },
+                            "start_location": {
+                                "lat": 40.6905968,
+                                "lng": -73.72614469999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 mi",
+                                "value": 156
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 18
+                            },
+                            "end_location": {
+                                "lat": 40.6920356,
+                                "lng": -73.726689
+                            },
+                            "html_instructions": "Turn <b>left</b> onto the <b>Cross Island Pkwy N</b> ramp to <b>White Stone Bridge</b>",
+                            "polyline": {
+                                "points": "_ljwFls~`MQTGFGDE@CBE@C@C?C@E@I@yCd@_@P"
+                            },
+                            "start_location": {
+                                "lat": 40.6907189,
+                                "lng": -73.7261477
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "8.3 mi",
+                                "value": 13324
+                            },
+                            "duration": {
+                                "text": "10 mins",
+                                "value": 588
+                            },
+                            "end_location": {
+                                "lat": 40.7895153,
+                                "lng": -73.7856419
+                            },
+                            "html_instructions": "Merge onto <b>Cross Island Pkwy</b>",
+                            "maneuver": "merge",
+                            "polyline": {
+                                "points": "gtjwFxv~`MmAB_@@mA@m@@_ABmDD}IRq@@sEFmADo@@sC@kPTmEDuA@sADoABwFH{BD]@yLRgCBoAFaAJ_ANkAXu@Ty@X}@Z]La@N{@\\UJ]Ls@Ti@P}@Ti@JQBm@F_AJ_AH_ADm@BiA?m@Ec@E{@Mk@KcAWk@Ug@Qk@Ww@e@aAq@g@]sDeDyAmAs@g@WQoAy@}@e@OGeAa@[KA?]Mq@SmBc@kDs@iAQ{AY_BUaAMi@GEA[EA?A?OAuBYa@GC?_@G[GkDc@sBWuC_@w@MyAQ[EwAOmBWmBUyFw@s@K}@I{Dg@WCq@EoCGY?Q@]@y@D]@WBmANa@Dk@JmAVwA^]HuGpBa@Pi@XSJ[PQJIHMJy@p@_@XYXk@j@_@b@eArAw@nA]l@Wb@}AzC}@dBcAxBoAzCiCxHq@hBO`@MRYl@w@~AKR[p@MXy@xAi@dAYd@U^g@x@e@t@MJq@`A[d@Y^aAlAk@l@m@p@UR{A`BUXo@t@sA|AUVc@n@_ArASZc@t@a@n@c@t@_AfBi@fAc@~@_@r@m@fAiBpCyCbDKF?@oAbAA@SNo@f@aAv@yAfAURq@h@UPYTa@Zo@d@s@f@i@`@A@k@b@gBrAqAdAmBdBeAbAs@j@cA~@a@b@YXa@`@w@x@o@x@y@jAYh@o@lAINe@hAYp@Wr@Un@IVM\\Uz@K`@Mj@_@fBa@vBc@rB[zAMj@IZGVEPM\\Uv@m@|Ae@fAu@tA_@j@iA~AOPGHA@IHGFaA`AeA`As@j@aAn@]PYHC@aA^yGhBwG~AqC~@gA`@uCrAmBpA}BpB}@`AoA`BqBlCyBtC_AjA?@gAjAiAjAqAjAeA|@_Ap@YTg@ZaBbAi@XuAt@_Af@{Ap@iBv@}Aj@qCdAyBr@GBkAh@aAd@iBbAaAr@w@l@mAhAsBtBqC~Cu@v@w@t@w@t@}@v@qAdAeBvAyExDiEzDkBzBm@|@gAhBm@lA[p@S`@Yr@Ul@e@vAk@fBUz@Sx@a@fBS`BOlAQ`BKrAGdAGbAEz@CzACbCA|A?^?hA?F@f@D|@BbA"
+                            },
+                            "start_location": {
+                                "lat": 40.6920356,
+                                "lng": -73.726689
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.4 mi",
+                                "value": 616
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 34
+                            },
+                            "end_location": {
+                                "lat": 40.7900871,
+                                "lng": -73.7922765
+                            },
+                            "html_instructions": "Take exit <b>33</b> for <b>Interstate 295</b>/<b>Throgs Neck Br</b> toward <b>Bronx</b>/<b>New England</b><div style=\"font-size:0.9em\">Toll road</div>",
+                            "maneuver": "ramp-right",
+                            "polyline": {
+                                "points": "ou}wFfgjaMAD?@AJ?J?PA\\Bn@D~@Dv@JbBL~AFh@BNDZJj@XbBLx@BZ@R@R@N?P?D?N?VAXAPAPGd@G\\I^K\\KVO\\A?GNKLCLCJCDGJMVCBILSPk@`@C@CBOZ"
+                            },
+                            "start_location": {
+                                "lat": 40.7895153,
+                                "lng": -73.7856419
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "2.3 mi",
+                                "value": 3625
+                            },
+                            "duration": {
+                                "text": "3 mins",
+                                "value": 159
+                            },
+                            "end_location": {
+                                "lat": 40.8179993,
+                                "lng": -73.80444039999999
+                            },
+                            "html_instructions": "Merge onto <b>I-295 N</b><div style=\"font-size:0.9em\">Toll road</div>",
+                            "maneuver": "merge",
+                            "polyline": {
+                                "points": "ay}wFvpkaMw@^wBbAi@TqA`@}@Vc@He@JaANq@JE?s@Du@BY@eA@w@?a@@kD@{A@cA?oA@yB?iD@kE?cDBiEAuDB_A?cE@iG?g@Ai@?M@mABC?sC@sCAc@AY?{@?kA?_@@eB@gE@eB@q@@y@Du@Dm@Fy@J{@NaB`@]JYJs@Vq@V}@`@gAj@o@^_@Vg@^c@\\i@b@aAbAk@n@]`@s@x@e@p@Yb@OX]l@k@bAKRQ^Ud@MXMZKVITMZKZIVM\\M^Kb@Mb@ENIXI\\GXGZI\\GXG^GZWdB[lCCXCZWxDC\\E^AHAJALAJALIrA"
+                            },
+                            "start_location": {
+                                "lat": 40.7900871,
+                                "lng": -73.7922765
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.4 mi",
+                                "value": 564
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 24
+                            },
+                            "end_location": {
+                                "lat": 40.81963,
+                                "lng": -73.8107443
+                            },
+                            "html_instructions": "Keep <b>left</b> to stay on <b>I-295 N</b><div style=\"font-size:0.9em\">Partial toll road</div>",
+                            "maneuver": "keep-left",
+                            "polyline": {
+                                "points": "ogcxFv|maMSfCE`@C\\EZEZCXOjASnBCZEXCXEZEZEXE\\GXEZGZEXGZGXGZGVEXg@jBK^Ol@IVIXIVIVIXKVIV"
+                            },
+                            "start_location": {
+                                "lat": 40.8179993,
+                                "lng": -73.80444039999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "1.3 mi",
+                                "value": 2146
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 86
+                            },
+                            "end_location": {
+                                "lat": 40.8279183,
+                                "lng": -73.8336214
+                            },
+                            "html_instructions": "Keep <b>left</b> at the fork to stay on <b>I-295 N</b>, follow signs for <b>Interstate 295 N</b>/<b>Interstate 95 S</b>/<b>Cross Bronx Expwy</b>/<b>Geo Washington Br</b>",
+                            "maneuver": "fork-left",
+                            "polyline": {
+                                "points": "uqcxFbdoaMs@~By@xBWp@eApCKVKXIVKXIXIXIXIVGZIZGXGZIf@Id@E\\EZE\\CZEZC\\CXa@dECZEZEZEZEZGXGZGXGXGXIXGXKXIVIXKX}A|DeBjEIZIR}AhE[bAy@vCCJ{@|DQv@ADOp@iClL]xAiBjIk@jCw@hDeAhEo@jB}BhG"
+                            },
+                            "start_location": {
+                                "lat": 40.81963,
+                                "lng": -73.8107443
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.7 mi",
+                                "value": 1052
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 44
+                            },
+                            "end_location": {
+                                "lat": 40.8288782,
+                                "lng": -73.8456935
+                            },
+                            "html_instructions": "Keep <b>left</b> to continue on <b>Cross Bronx Expy</b>, follow signs for <b>Interstate 95 S</b>/<b>G Washington Br</b>/<b>Newark NJ</b>",
+                            "maneuver": "keep-left",
+                            "polyline": {
+                                "points": "oeexFbssaMAZo@hBUr@Wt@St@St@Oj@?BA?EPCNI\\A@Ib@ERA@CNG\\?@EVCPAHE^CLAJ?@EZ?D?@Gp@G|@Cv@AJCh@Ax@?x@@z@@x@?N@h@@R?@?@@b@?FBn@Bv@Fv@Dr@B\\?@B\\TjDDv@H~@Dl@BX?D?F@PBZ@Z?\\@R?H?b@?T?V?ZAZ?\\AZAZAZQlA"
+                            },
+                            "start_location": {
+                                "lat": 40.8279183,
+                                "lng": -73.8336214
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "4.7 mi",
+                                "value": 7524
+                            },
+                            "duration": {
+                                "text": "14 mins",
+                                "value": 810
+                            },
+                            "end_location": {
+                                "lat": 40.846018,
+                                "lng": -73.9302397
+                            },
+                            "html_instructions": "Continue onto <b>I-95 S</b>",
+                            "polyline": {
+                                "points": "okexFp~uaMIv@Ip@S`AQ|@UbAU|@c@jBOl@Md@Kb@Sz@YzACLCJ]jB]hBCHCN{@zDm@rCObAI`@Mj@uAbHo@|CETgBtIcA~EcAjFYzAADQ~@y@|DQ~@[|AKf@a@nBG^k@pCi@dC]jBI`@s@hDI^q@hD]hBs@rD[jBMv@U`BKt@ABE`@?HQjBMzAGbAE|@Cn@C`ACn@Al@ErA?HC~@?ZA\\?FCr@?BKrEGjC?B?DEpACt@Eh@C\\C\\CZCZCZE\\CXEZEZG\\EZEZEZGXEXEVGVGVGVGVERGPEPABi@jBOd@M^EPGPGNGLGNMXMVMZMZ{@hBeDbHqD`IqLlWq@|AQd@Sh@KXGVOh@[lAUfAMr@OjAOjAIx@GfA_@pGALCZ?HIvAIfAKdB_@|GABCp@OjCAJOhCEn@C`@C`@MhCEp@C`@Cb@OjCMlBA\\ItAItAMnCE~@Cz@El@E~@IzDE|AGtDGzBGfDAfAEpBGfD?@?\\?@AT?\\EbC?HC|B?tAClBApA@t@@t@@dFDpEPlJDtATpK^zO?\\@\\@Z?\\AZ?^A^AZAZA\\AVATCVAXCTCTCTEVEVCRe@rCYnAo@lEYjBM~@U|AU~A"
+                            },
+                            "start_location": {
+                                "lat": 40.8288782,
+                                "lng": -73.8456935
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "2.4 mi",
+                                "value": 3789
+                            },
+                            "duration": {
+                                "text": "4 mins",
+                                "value": 227
+                            },
+                            "end_location": {
+                                "lat": 40.85690150000001,
+                                "lng": -73.97252979999999
+                            },
+                            "html_instructions": "Keep <b>right</b> at the fork to continue on <b>Interstate 95 Lower Level S</b>/<b>U.S. 1 Lower Level S</b>, follow signs for <b>Interstate 95 S</b>/<b>US 1 S</b>/<b>G W Bridge Lower Level</b><div style=\"font-size:0.9em\">Entering New Jersey</div>",
+                            "maneuver": "fork-right",
+                            "polyline": {
+                                "points": "svhxF~nfbMWr@IZAFMj@ITGNADITu@fCAFA@w@fCK^_@~AGRi@bBqCnIqAvDUp@GXGRCNKdAADIj@OnA?@a@vDA@?@CZEPSjCEd@OrAQxAAD?@[bCG\\E^Kr@AF?DET?BCP?BOdA?@CXCN?@AFAHALAHIbAEzAuBxOsCrWm@dEuB|Qk@hFc@pDa@pDw@nH{@|HANCRIf@e@|CQv@[~ASdACFGZG\\CHQ~@If@a@|B?@?BA??@UpAUrAEf@It@GdAC^ANCf@MfBIfACTGl@Ij@CNCNGZGXSbAe@xBMn@G\\AHA@?@Ib@AFKb@GVMd@Sl@]z@]t@_@r@c@p@c@r@ABW\\"
+                            },
+                            "start_location": {
+                                "lat": 40.846018,
+                                "lng": -73.9302397
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "2.7 mi",
+                                "value": 4375
+                            },
+                            "duration": {
+                                "text": "3 mins",
+                                "value": 168
+                            },
+                            "end_location": {
+                                "lat": 40.8681363,
+                                "lng": -74.00435039999999
+                            },
+                            "html_instructions": "Continue onto <b>I-95</b><div style=\"font-size:0.9em\">Partial toll road</div>",
+                            "polyline": {
+                                "points": "szjxFhwnbMa@l@UX[\\g@^YVA@c@VGDWRa@PWNYJUJC@YLYHYJw@TA@g@Ly@P]Fk@HaALq@Bi@C}@A[CUC[Ew@Ms@KYE[IYEYE[EWC[CYC[CYA]?W?[@Y@WB[BYDYD[H]HUF]Fc@Ne@Pc@Ps@Xq@XgAl@q@^gB~@i@\\q@`@o@^aAl@u@h@o@d@q@b@o@f@m@f@m@f@m@h@k@f@m@j@m@j@k@j@i@h@k@n@g@j@g@l@k@p@i@n@g@n@MROPc@l@g@r@c@p@g@r@e@t@c@t@c@r@c@v@Ub@U`@}@bBa@x@OZCHMTM\\O^Wr@]fAi@nBADK`@G^I^CTCTKt@Gp@E\\Gx@GhACv@CdA?|@@t@D`BFbAF|@H~@Ft@LnAV~BTjBdBxIn@hCj@xB~AbF^`A|@~Br@`B~@rBp@vAdAlBVb@t@rAz@vAhA|A`@j@f@n@p@x@t@bA`AhAj@t@xA~Ab@l@@@JL@@h@r@VZLNZ^n@z@TXLR"
+                            },
+                            "start_location": {
+                                "lat": 40.85690150000001,
+                                "lng": -73.97252979999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.7 mi",
+                                "value": 1188
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 48
+                            },
+                            "end_location": {
+                                "lat": 40.8656465,
+                                "lng": -74.0175483
+                            },
+                            "html_instructions": "Take exit <b>69</b> for <b>Interstate 80 W</b> toward <b>Hackensack</b>/<b>Patterson</b>/<b>Garden State Parkway</b>",
+                            "maneuver": "ramp-right",
+                            "polyline": {
+                                "points": "{`mxFd~tbM@PHNn@bA|@zAh@`Af@fAJVn@|ATp@X`AZfA`@~ANt@Pz@TvARzAHr@Fl@PdBL`BN|CDjADx@B`ABnA@lA@|BAnBAp@Af@Ad@EpBG~AGpAGhAA\\Ab@"
+                            },
+                            "start_location": {
+                                "lat": 40.8681363,
+                                "lng": -74.00435039999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "14.0 mi",
+                                "value": 22469
+                            },
+                            "duration": {
+                                "text": "14 mins",
+                                "value": 832
+                            },
+                            "end_location": {
+                                "lat": 40.89802,
+                                "lng": -74.24774239999999
+                            },
+                            "html_instructions": "Continue onto <b>I-80 W</b>",
+                            "polyline": {
+                                "points": "iqlxFtpwbMKbB_@dFW~C?@?FOjB]rE[~DEb@W~CYtD[bEWhD[dEQxCS`FEfA?@C~AA\\A~AC|B?lA?@@~@@rB?jB?HDvLFnM?@@zA@nB@`D@T@tA?@@nM?P?@?@AlA?xCCnCI~A?@Ad@?@AhAElBGlCAr@GbBIlCEt@KdC?@OxCOdCWvD[|CWhB]dBMl@e@rB]dAa@jAw@jBg@dAU`@g@|@aAvAMROPSPMPMPOPiAtACB}@`A[ZYZYXED}@z@{AxAELEHQPm@j@y@p@{@t@eAz@gAz@uAbAuAbAGJGFgBjAyA~@w@d@uAv@k@XA??@y@d@{Ax@m@Xu@\\uAl@A@A?A@e@Rs@Z}An@e@Pa@PoAb@oBn@sAd@}FlBa@PuAd@w@X_A^uAn@}@f@iAr@ABA@A@?@A@?@?BkAz@oAjA}AdBEDIH]^cAjAi@l@aBfBcJdKWV{AdB}BfCw@~@cCnCs@r@KL]b@u@z@wAfBq@dAm@dACHkCnFq@pA_@n@m@|@Y`@WZYXOLMLu@l@w@n@mAt@y@\\oAf@y@Ty@To@LcAZmA^k@Tq@Xe@Vc@VcAn@q@h@o@l@a@d@A@A@i@n@A@MNQVSZA@q@nAUb@cAjCiAvDsAnFK^Ov@s@dDq@hE[~BA?Kv@YlCWdCS`CEh@I`BIzACj@Ez@EtBy@l^?@?TAVIfCKrFMpGM|GKxEG|BAf@?@?JCt@CrAEjBA^GzBAz@AT?@AJAd@?NAJAb@?HElAI~CEfBGhCIbEK|CAv@Ax@?vDDxBJbDNlCN|BX`DPnAD^p@fE\\nBH`@p@xC`@~A@HZfAl@vBFP?BJVPl@tAvE\\pATz@Rv@T`ARnALfAHbAHzB?^?@@^?`ACf@ChAM`Bs@vHs@vHa@xECZCb@Af@Aj@AfE?DBr@?B@`@?D?B?B@X?B@L?J@D@^L~B?L?FJfABXLpAJhA@F?BBR?DFd@R~Bd@xEBRFn@\\nE^tDr@nHDd@Hv@F~@D~@DvA?`CAjBK|BYpDA\\Iz@_@rEq@tIKxAYrDYnDK`AM~A?@OtAGj@Ij@Ox@Kd@Or@YdAOf@Wt@Qd@Qb@Uf@Yj@o@hAW`@g@r@iAvACBMNED}@hAaDxDq@`Ai@|@i@fAu@~AGNGX?@ENMd@UbAADQ`AIb@OlACVMfAAF[~CCTSjBQjBQ`BMnA?@CPQlBIr@CPEb@Gj@Il@UnBUlBEZCVCTKfA[`DMnAKlAe@lEQvBUtBAD?FIx@CN?BIl@AJADGx@G\\KxAKpAMtBGrBItC?dAAhBAhE@vEBx@BrADvBFv@Fr@H~@Hr@Hb@TjAHZ?BJZRn@Pf@\\x@\\t@h@dAx@zAxAtC^x@Tf@Zv@^|@f@rATp@X`A\\fAT|@jA|ET`AVpA~@dEb@fB^nANb@FTRd@BH@@Zx@b@|@^t@HLz@rA\\f@d@f@p@t@h@d@RPj@d@n@f@z@h@HDDBTNhAp@f@V~BfAb@PlFbChAn@z@j@d@`@FFhBrB\\f@Xd@R\\`@v@Td@DJPd@DL@DBFFRNb@L`@BHBLLh@Pz@Jn@Jp@?BHl@@J@JFz@@HFxAB`AAdAAbAGlAKbBS|AQdAWpAQj@kBdGUz@St@Q~@Kn@WlBEr@GhBAb@?|AFrBP`F\\tIl@rPLhDb@vKFhECnFAL?FAVAD?BEfAW~CS~AGb@G^QhAMn@q@~CYjA_@~AiBdI}AzG]zAYlAIf@AFABQfACRIf@OpAOrAGn@IfAKzBGhBCXAxA?NBzBDzBPnF@ZD|@Bz@@TRdE@RXbETrDp@jIH|@ZfDBVt@zGvAfK"
+                            },
+                            "start_location": {
+                                "lat": 40.8656465,
+                                "lng": -74.0175483
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "7.6 mi",
+                                "value": 12208
+                            },
+                            "duration": {
+                                "text": "7 mins",
+                                "value": 406
+                            },
+                            "end_location": {
+                                "lat": 40.8601419,
+                                "lng": -74.3686049
+                            },
+                            "html_instructions": "Keep <b>left</b> to stay on <b>I-80 W</b>",
+                            "maneuver": "keep-left",
+                            "polyline": {
+                                "points": "s{rxFjoddM\\xBhAdHJj@?B@DtB|MBPBNHh@DTz@tFVdBF\\BR@Xp@vEHl@`@|Cn@pFnA|Lb@rF\\`EL|Bj@vKDx@BR@P?@@Pd@zLX~KRjN@xA@xATf}@Hv]Pdo@D~GHzDFrCDrAFxAN|CXnET~CL~AT~BHz@Hx@LbANpARdBVjBRvA^zBXdBTtAn@bDXtA^hB^bBn@lCn@`C|@|Cv@hCb@vAf@xAZ|@d@tAd@lAh@tAl@zA~@xB`AvB`AtBJPj@lAb@z@t@tAt@rAx@tAv@pAt@jA\\j@^j@\\f@^h@`B|Bp@z@`@f@`@f@r@v@dAhAfAdAt@t@f@`@r@l@|@p@v@j@pAz@r@`@~@h@t@b@d@Tt@\\bAb@x@\\~@^fA^v@VbBf@bBb@VFn@PfDx@pVlGtEjAnBd@nD~@dEdArG`BfAXnA`@p@TLHbA`@v@`@z@d@j@b@r@d@p@j@|@v@p@p@t@z@d@j@~@rA^l@n@fAt@|A^x@d@hA`@hAv@jCPn@TdATjATrALbAL~@LnADj@Dj@JhBBt@BfA@d@?l@?`@?lAAz@ExAEpAIhBSnD[jG]fHI`BElAEt@I`B[vFSzDOzCQhDGtAQzDE`BC|AAjB@jBDjBFpBHbBJtAPhBTrBRvA|@pFVtAZ`BRhA\\hCh@~C\\fBNz@Lv@TpAdD`RFV"
+                            },
+                            "start_location": {
+                                "lat": 40.89802,
+                                "lng": -74.24774239999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "1.0 mi",
+                                "value": 1619
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 60
+                            },
+                            "end_location": {
+                                "lat": 40.860923,
+                                "lng": -74.3875478
+                            },
+                            "html_instructions": "Take exit <b>43</b> toward <b>US-46</b>/<b>I-287</b>/<b>Morristown</b>/<b>Mahwah</b>",
+                            "maneuver": "ramp-right",
+                            "polyline": {
+                                "points": "{nkxFvb|dMR`BJj@Jt@Lx@Ht@Jz@Ht@Hv@Fv@Ft@Fx@Dv@Dx@Dt@@\\@ZBt@@\\@Z@v@?x@?v@?z@EpBCx@Cv@Ev@Gt@Gx@Gv@Gv@AJEh@MhAUdCI|@I|@Ix@Gv@KnA_@`E]hDG|@KbAGv@MbBEz@ALEf@Ex@Et@Cv@C\\EpACv@EnACv@AnAAx@CpB"
+                            },
+                            "start_location": {
+                                "lat": 40.8601419,
+                                "lng": -74.3686049
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.7 mi",
+                                "value": 1170
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 47
+                            },
+                            "end_location": {
+                                "lat": 40.8614886,
+                                "lng": -74.40133639999999
+                            },
+                            "html_instructions": "Keep <b>right</b> at the fork, follow signs for <b>I-287</b>",
+                            "maneuver": "fork-right",
+                            "polyline": {
+                                "points": "wskxFdy_eMAlA?`@?p@?pA@z@?v@BhB@|@@z@@x@B~@@v@HzGFbF@x@@t@@x@@x@?x@@v@?x@Ax@Av@Cx@Cx@Cx@Ev@Ex@Gx@Gv@Iv@It@Iv@Kv@Kt@Mv@m@fF"
+                            },
+                            "start_location": {
+                                "lat": 40.860923,
+                                "lng": -74.3875478
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.5 mi",
+                                "value": 823
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 33
+                            },
+                            "end_location": {
+                                "lat": 40.8634678,
+                                "lng": -74.4107626
+                            },
+                            "html_instructions": "Keep <b>right</b> at the fork to continue on <b>Exit 43 A-B</b>, follow signs for <b>Interstate 287</b>/<b>US 46</b>/<b>Morristown</b>/<b>Mahwah</b>",
+                            "maneuver": "fork-right",
+                            "polyline": {
+                                "points": "iwkxFjobeMm@tD[zBOfAOhAOdAS|Ai@`EMjAOfAOfAMdAMhAMfAMhAObAADO|Aa@zDi@nE"
+                            },
+                            "start_location": {
+                                "lat": 40.8614886,
+                                "lng": -74.40133639999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "8.5 mi",
+                                "value": 13612
+                            },
+                            "duration": {
+                                "text": "8 mins",
+                                "value": 476
+                            },
+                            "end_location": {
+                                "lat": 40.7678001,
+                                "lng": -74.489933
+                            },
+                            "html_instructions": "Keep <b>left</b> at the fork to continue on <b>Exit 43A</b>, follow signs for <b>I-287 S</b>/<b>Morristown</b> and merge onto <b>I-287 S</b>",
+                            "maneuver": "fork-left",
+                            "polyline": {
+                                "points": "uclxFfjdeMCl@EXGXGXKVIVUh@MV_@b@_@`@c@^s@l@u@n@_@^_@d@a@l@Yj@O^M\\GVIXG\\EXC^A\\A^?\\@T@^BZDZDZF^FXJ\\JZJVLTLRNRPRNPRLRLRJRJXJPDj@P~@VjD|@h@Nf@Lh@Ph@Ph@Rh@Rh@Pj@Th@Rd@Rj@Td@Rf@Tj@Vf@Tf@Tf@Vf@Th@Vf@Vh@Vf@Xb@Vh@Xf@Xd@Xf@Xf@Xf@ZfQrK`@Tx@f@v@f@lKrG|CnB\\RLFv@h@|@f@tGfElEtCj@`@^V\\TDDDDFZrBnAtCbB`Bz@|CnBTNd@ZXPLFd@Xf@Zz@f@h@\\vA|@`_@dUhAv@PJfAp@|A|@xFnDh@Z|AbANJrCbBl@^zA~@nAv@|EvCxAx@bBx@`Bt@fBr@|@Z|@Z`AXTHfDz@LDPFXFzBj@`AXJBhBb@lBd@jBf@ZHdB`@dFnAtAZvD`An@LJ@b@J^HRF~Cx@dAXJ@l@J@?r@N`ANpATrARvBX|ATnAPJ@bAJF@D?H@F@zBXlARhAVlA\\lAb@jAf@t@^\\Rd@Xh@^f@^d@\\x@t@t@t@v@x@^b@PTNRj@x@Xb@LPd@v@j@dAp@vAZl@`@x@jIpPj@jAfAtBtBrDt@rAb@t@\\h@f@z@rA|BNThB~CrDlGz@zAh@bAf@~@v@~Ap@|Ad@hAp@bBL^j@|Aj@fBh@hBNj@Ld@T~@J`@J`@Jb@^~ABDPr@Tt@f@lATf@NZZh@PV\\d@^f@\\^RTd@`@h@`@f@\\VNx@^LFh@Rh@Nt@Ph@HTB`@BR@ZB`@?T?t@ChCMRA^CdAA@?l@?bADvBL|Mt@~AHxIf@xBLzEX`AHf@D~@Ft@Jt@NXHVHf@Pd@Tf@V@@t@d@d@\\fA|@FFpBfBjDxCxArApBbB~EtDdBlA~AdAxG`EtD|BzEtC\\RzAbAbAt@`Ar@p@j@VVZZVT\\Z`@b@j@j@XZPRTV\\b@RXLN`@h@z@lAZd@p@hAdAfBh@~@Zn@Xl@Xn@v@bBhAtC|@`CxAzDJT\\|@r@jB^bAp@fBxA~Dl@~Af@nAdAlCPh@"
+                            },
+                            "start_location": {
+                                "lat": 40.8634678,
+                                "lng": -74.4107626
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 mi",
+                                "value": 243
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 21
+                            },
+                            "end_location": {
+                                "lat": 40.7685621,
+                                "lng": -74.4910701
+                            },
+                            "html_instructions": "Take exit <b>33</b> for <b>Harter Rd</b>",
+                            "maneuver": "ramp-right",
+                            "polyline": {
+                                "points": "wmywF`yseM?R?@?@?B?@?B@B@BBLFTBLDTBRBT@T?N?NARCPCNGLABCDEHCBCBEDC@EBCBE@C@C@E?K@E?EAE?EAEAECECGGIGEIGIEKEKK["
+                            },
+                            "start_location": {
+                                "lat": 40.7678001,
+                                "lng": -74.489933
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.9 mi",
+                                "value": 1419
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 110
+                            },
+                            "end_location": {
+                                "lat": 40.7782788,
+                                "lng": -74.5000704
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>Harter Rd</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "orywFd`teMk@wAM[sBjAgB`Ac@VMJSNWT[VUXSXQXWh@Wb@ORWXONQLQJ_@PcAd@cBv@yCtAyBfAyCvA_@T_@TQNSRSVS\\MVUl@Y|@Ob@Qb@OV]d@[\\u@r@[ZYZUZY^k@|@Yh@Wj@IT_AjCk@|Aa@fA"
+                            },
+                            "start_location": {
+                                "lat": 40.7685621,
+                                "lng": -74.4910701
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.8 mi",
+                                "value": 1293
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 100
+                            },
+                            "end_location": {
+                                "lat": 40.7690436,
+                                "lng": -74.5092918
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>US-202 S</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "go{wFlxueMrA~@xBdBv@n@lBnA\\RPRp@f@t@h@f@`@b@Xh@\\j@`@pAbA|@|@t@x@lAvAHLlAtAfAhALLl@n@l@v@fArAd@p@NHfB~BvAdB|AhB`@h@lCnD^d@"
+                            },
+                            "start_location": {
+                                "lat": 40.7782788,
+                                "lng": -74.5000704
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.7 mi",
+                                "value": 1206
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 99
+                            },
+                            "end_location": {
+                                "lat": 40.7791922,
+                                "lng": -74.5125432
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Bailey Hollow Rd</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "ouywF`rweMUt@ELGNKHGBGBSAQ?WEyA[SAS@k@D[Hg@JyAj@UBw@ROHUNsBpBKFMBq@BQD[TU\\MLe@VYLYFQB]Cs@YSEQAQ?OBQFm@X]Ng@Ls@Ns@Lg@HiALmAPyInAkBTc@D"
+                            },
+                            "start_location": {
+                                "lat": 40.7690436,
+                                "lng": -74.5092918
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                }
+            ],
+            "overview_polyline": {
+                "points": "czjwFpcaaMxKii@fB{It@mDyD_BN{AL}Ad@wFX_DmAn@_IbA{_@p@ol@t@{U^}G|@_IrCcJnBwFRyDe@cEwAuI{GeL}GqR{DySmCqZ{DsPmAiHn@uQ|FiFvEcNlWsIlT}FzJaUfYkKbR{HjHyWvScKbK{FrLaIt[_FfIgIlGwRjF}MfG_SrUoNvKeUlJ_GvC{H`HgWrUuHvHuBfDwBtEwEzR}@xTHbHVrIvAzKDvBw@vEmDfFuNxE{IZ}_ANce@^sLfD{JxHwFpIsB`F_EbSaFvf@gH~UwEtP{BdRcDpJmJjZyKxf@gJdZcBzHm@vNd@hMx@bPGvE{CdPgHn]mQz|@{Kxl@kAvXgAbWiBtJk^jy@mD~KeBhSiCtd@_Cnm@g@n`@vAxdA{ClVeClNwArEoKx\\{@dGuCtWeQ|{A}E`a@cBxIiCvUkCbOsC|HuDlF}JbFkDp@{EJiG}@wE]qE`@eH`CeNdIuJ~HuIlJkOtVqCnI_ArGGzOf@bGbEnUhF~OjFzKdKfO|LzOzG`NlDbQjAjTQlSuFnw@eBr\\AvQXhy@{@dd@k@fLiBdPsBrH}CpGiFzGuExEcJrI}NhKqS|JqUbI{IlEuZf\\iP~QgMlTeHfGkNpEeIxFaBvBmC`GyD~NuE|\\kDfvAe@lSu@b[NnOjA|NtD|RbFdQrAdG`@fH{Bf\\k@nRBpAjA~O|Dxb@\\nGg@|OiDbc@{AbLeEjKaKjMqEbJuAzHqDt]yEbe@i@tFm@b`@z@hOlCnIvIbR|GpXpC|IhH`KpEbDnTdLzFpIfAdDfArGRvJy@tIkD~LiArGO~GdB~e@t@z^w@~J_Mdl@sAdQd@fV~Cxc@dGjc@bF`\\jF~c@fCl`@tAxi@b@raBh@tbAv@zO~BpVdF~Y|Ij[rJnU`KrQhJ~LfNnLbMdGhh@dNxc@jLtK`HrJzN`FxR|@tNk@~SiCnh@eAn^b@vKxBfPjEfWfG~^bAbMRpIc@~NgExe@mAv^h@xi@GjM}@bMuIbp@mCrVoBbFiH~HcAdFXfFhB|DvDhBdN~DnSbJ~r@xb@vS`NfRxLbaAzl@~XlOtLlDvg@bMhNvCpMdBfMjCvJhGbGlH`Sp`@bNvUbOxYpJn[rEbGzHlD~FRnNAvi@~CrIvBdP`NvOlLhUhN|J~HnEdFpIlNpKfX|I|V^vC]fByAXw@cAw@sBaCn@mDtBoD|EmLhGsIjEmAxAiDfHyFzHwCfIrJdHxHtF`MnMvNfQnDxEHzAa@j@sFYsDdAqE~C}ATeBxAcBTkBa@eHjBaSjC"
+            },
+            "summary": "I-80 W",
+            "warnings": [],
+            "waypoint_order": []
+        }
+    ],
+    "status": "OK"
+}

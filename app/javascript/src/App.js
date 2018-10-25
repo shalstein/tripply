@@ -4,11 +4,8 @@ import AppBar from './components/AppBar'
 import AddressesInput from './components/AddressesInput'
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import DirectionsTable from './components/directionsTable';
-import Paper from '@material-ui/core/Paper'
-import Grid from '@material-ui/core/Grid';
 import TripInfo from './components/tripInfo';
-import DevResponse from './responseDevV3.js'
+import DevResponse from './responseDevV4.js'
 
 const styles = theme => ({
 
@@ -35,6 +32,7 @@ class App extends Component {
    this.dummyData = DevResponse;
    this.state = {
      directions: this.dummyData.directions ,
+     overview_polyline: this.dummyData.overview_polyline,
      origin: '',
      destination: '',
      weather: [],
@@ -71,7 +69,7 @@ class App extends Component {
     let currentComponent = <AddressesInput origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
 
     if (this.state.directions) {
-       currentComponent = <TripInfo directions={this.state.directions} weather={this.state.weather}   />
+       currentComponent = <TripInfo directions={this.state.directions} overview_polyline={this.state.overview_polyline} weather={this.state.weather}   />
     }
 
 
