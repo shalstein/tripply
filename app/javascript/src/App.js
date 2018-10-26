@@ -5,7 +5,7 @@ import AddressesInput from './components/AddressesInput'
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import TripInfo from './components/tripInfo';
-import DevResponse from './responseDevV4.js'
+import DevResponse from './responseDevV5'
 
 const styles = theme => ({
 

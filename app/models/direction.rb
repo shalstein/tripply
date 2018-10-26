@@ -40,11 +40,12 @@ class Direction
         
         meter_counter = 0
         weatherReports = []
-
+        polylines = []
 
         steps = leg['steps'].map do |step|
+            polyline = step['polyline']['points']
+            polylines << polyline
             if (meter_counter + step['distance']['value']) >= 100000
-                polyline = step['polyline']['points']
                 points = GoogleMapsService::Polyline.decode(polyline)
                 points_distance = 0
 
@@ -69,7 +70,7 @@ class Direction
         
         weatherReports.prepend(get_weather(leg['steps'][0]['start_location']) )
 
-       { weather: weatherReports, directions: {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: steps, destination: leg['end_address'],  origin: leg['start_address'], status: directions['status']}, overview_polyline: directions['routes'][0]['overview_polyline']['points'] }
+       { weather: weatherReports, directions: {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: steps, destination: leg['end_address'],  origin: leg['start_address'], status: directions['status']}, overview_polyline: polylines }
     end
 
     def get_weather(coordinates)
