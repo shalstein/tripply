@@ -5,7 +5,7 @@ import AddressesInput from './components/AddressesInput'
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import TripInfo from './components/tripInfo';
-import DevResponse from './responseDevV6'
+import DevResponse from './responseDevV7'
 
 const styles = theme => ({
 
@@ -35,7 +35,7 @@ class App extends Component {
     mapData: this.dummyData.mapData,
      origin: '',
      destination: '',
-     weather: [],
+     weather: this.dummyData.weather,
    }
   }
 
@@ -49,8 +49,8 @@ class App extends Component {
     .then(response => response.json())
     
     .then(tripData => { 
-      if (tripData.directions.status !== 'OK'){
-        throw new Error(`API status: ${directions.status}`)
+      if (tripData.status !== 'OK'){
+        throw new Error(`API status: ${tripData.status}`)
       }
       this.setState({directions: tripData.directions, weather: tripData.weather})
     })

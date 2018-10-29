@@ -1,205 +1,281 @@
 export default {
     "weather": [
         {
-            "temp": 19.42,
+            "temp": 22.96,
             "visibility": 16093,
-            "city_name": "Gulf Gate Estates",
+            "city_name": "Vamo",
+            "location": {
+                "lat": 27.241131,
+                "lng": -82.4645014
+            },
             "id": 800,
             "main": "Clear",
             "description": "clear sky",
-            "icon": "01n"
+            "icon": "01d"
         },
         {
-            "temp": 17.3,
+            "temp": 23.34,
             "visibility": 16093,
             "city_name": "Temple Terrace",
+            "location": {
+                "lat": 28.038650000000004,
+                "lng": -82.34967
+            },
             "id": 800,
             "main": "Clear",
             "description": "clear sky",
-            "icon": "01n"
+            "icon": "01d"
         },
         {
-            "temp": 15.28,
+            "temp": 23.48,
             "visibility": 16093,
             "city_name": "Wildwood",
+            "location": {
+                "lat": 28.844420000000003,
+                "lng": -82.09056000000001
+            },
             "id": 800,
             "main": "Clear",
             "description": "clear sky",
-            "icon": "01n"
+            "icon": "01d"
         },
         {
-            "temp": 15.05,
+            "temp": 23.96,
             "visibility": 16093,
             "city_name": "Hawthorne",
-            "id": 803,
-            "main": "Clouds",
-            "description": "broken clouds",
-            "icon": "04n"
-        },
-        {
-            "temp": 16.85,
-            "visibility": 16093,
-            "city_name": "Jacksonville",
-            "id": 803,
-            "main": "Clouds",
-            "description": "broken clouds",
-            "icon": "04n"
-        },
-        {
-            "temp": 15.15,
-            "visibility": 16093,
-            "city_name": "Brunswick",
-            "id": 800,
-            "main": "Clear",
-            "description": "clear sky",
-            "icon": "01n"
-        },
-        {
-            "temp": 14.52,
-            "visibility": 16093,
-            "city_name": "Richmond Hill",
-            "id": 800,
-            "main": "Clear",
-            "description": "clear sky",
-            "icon": "01n"
-        },
-        {
-            "temp": 14.24,
-            "visibility": 16093,
-            "city_name": "Yemassee",
-            "id": 800,
-            "main": "Clear",
-            "description": "clear sky",
-            "icon": "01n"
-        },
-        {
-            "temp": 13.77,
-            "visibility": 16093,
-            "city_name": "Holly Hill",
-            "id": 800,
-            "main": "Clear",
-            "description": "clear sky",
-            "icon": "01n"
-        },
-        {
-            "temp": 13.87,
-            "visibility": 16093,
-            "city_name": "Florence",
-            "id": 800,
-            "main": "Clear",
-            "description": "clear sky",
-            "icon": "01n"
-        },
-        {
-            "temp": 14.2,
-            "visibility": 16093,
-            "city_name": "Saint Pauls",
-            "id": 800,
-            "main": "Clear",
-            "description": "clear sky",
-            "icon": "01n"
-        },
-        {
-            "temp": 12.92,
-            "visibility": 16093,
-            "city_name": "Four Oaks",
-            "id": 800,
-            "main": "Clear",
-            "description": "clear sky",
-            "icon": "01n"
-        },
-        {
-            "temp": 11.83,
-            "visibility": 16093,
-            "city_name": "Enfield",
-            "id": 800,
-            "main": "Clear",
-            "description": "clear sky",
-            "icon": "01n"
-        },
-        {
-            "temp": 12.43,
-            "visibility": 16093,
-            "city_name": "Sussex",
-            "id": 804,
-            "main": "Clouds",
-            "description": "overcast clouds",
-            "icon": "04n"
-        },
-        {
-            "temp": 12.13,
-            "visibility": 16093,
-            "city_name": "Ashland",
-            "id": 803,
-            "main": "Clouds",
-            "description": "broken clouds",
-            "icon": "04n"
-        },
-        {
-            "temp": 11.5,
-            "visibility": 16093,
-            "city_name": "Potomac Mills",
-            "id": 500,
-            "main": "Rain",
-            "description": "light rain",
-            "icon": "10n"
-        },
-        {
-            "temp": 11.24,
-            "visibility": 16093,
-            "city_name": "Brooklyn Park",
-            "id": 500,
-            "main": "Rain",
-            "description": "light rain",
-            "icon": "10n"
-        },
-        {
-            "temp": 8.3,
-            "visibility": 16093,
-            "city_name": "Brookside",
-            "id": 803,
-            "main": "Clouds",
-            "description": "broken clouds",
-            "icon": "04n"
-        },
-        {
-            "temp": 8.38,
-            "visibility": 16093,
-            "city_name": "Roebling",
+            "location": {
+                "lat": 29.668340000000004,
+                "lng": -82.11845000000001
+            },
             "id": 802,
             "main": "Clouds",
             "description": "scattered clouds",
-            "icon": "03n"
+            "icon": "03d"
         },
         {
-            "temp": 9.83,
+            "temp": 22.93,
             "visibility": 16093,
-            "city_name": "Bensonhurst",
+            "city_name": "Jacksonville",
+            "location": {
+                "lat": 30.320700000000002,
+                "lng": -81.72080000000001
+            },
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        },
+        {
+            "temp": 21.74,
+            "visibility": 16093,
+            "city_name": "Brunswick",
+            "location": {
+                "lat": 31.1352,
+                "lng": -81.57643
+            },
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        },
+        {
+            "temp": 20.41,
+            "visibility": 16093,
+            "city_name": "Richmond Hill",
+            "location": {
+                "lat": 31.98175,
+                "lng": -81.30674
+            },
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        },
+        {
+            "temp": 20.13,
+            "visibility": 16093,
+            "city_name": "Yemassee",
+            "location": {
+                "lat": 32.74085,
+                "lng": -80.83843
+            },
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        },
+        {
+            "temp": 18.39,
+            "visibility": 16093,
+            "city_name": "Holly Hill",
+            "location": {
+                "lat": 33.54368,
+                "lng": -80.41253
+            },
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        },
+        {
+            "temp": 17.44,
+            "visibility": 16093,
+            "city_name": "Florence",
+            "location": {
+                "lat": 34.24224,
+                "lng": -79.77686000000001
+            },
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        },
+        {
+            "temp": 16.38,
+            "visibility": 16093,
+            "city_name": "Saint Pauls",
+            "location": {
+                "lat": 34.779740000000004,
+                "lng": -78.99525000000001
+            },
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        },
+        {
+            "temp": 15.86,
+            "visibility": 16093,
+            "city_name": "Smithfield",
+            "location": {
+                "lat": 35.474940000000004,
+                "lng": -78.37140000000001
+            },
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        },
+        {
+            "temp": 15.66,
+            "visibility": 16093,
+            "city_name": "Enfield",
+            "location": {
+                "lat": 36.17584,
+                "lng": -77.76885
+            },
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        },
+        {
+            "temp": 15.85,
+            "visibility": 16093,
+            "city_name": "Sussex",
+            "location": {
+                "lat": 36.986700000000006,
+                "lng": -77.39218000000001
+            },
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        },
+        {
+            "temp": 15.62,
+            "visibility": 16093,
+            "city_name": "Ashland",
+            "location": {
+                "lat": 37.819210000000005,
+                "lng": -77.45786000000001
+            },
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        },
+        {
+            "temp": 14.07,
+            "visibility": 16093,
+            "city_name": "Potomac Mills",
+            "location": {
+                "lat": 38.6505,
+                "lng": -77.28266
+            },
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        },
+        {
+            "temp": 13.63,
+            "visibility": 16093,
+            "city_name": "Brooklyn Park",
+            "location": {
+                "lat": 39.240790000000004,
+                "lng": -76.60302
+            },
+            "id": 502,
+            "main": "Rain",
+            "description": "heavy intensity rain",
+            "icon": "10d"
+        },
+        {
+            "temp": 12.33,
+            "visibility": 16093,
+            "city_name": "Brookside",
+            "location": {
+                "lat": 39.67052,
+                "lng": -75.67762
+            },
             "id": 803,
             "main": "Clouds",
             "description": "broken clouds",
-            "icon": "04n"
+            "icon": "04d"
+        },
+        {
+            "temp": 11.43,
+            "visibility": 16093,
+            "city_name": "Bordentown",
+            "location": {
+                "lat": 40.10268000000001,
+                "lng": -74.72404
+            },
+            "id": 500,
+            "main": "Rain",
+            "description": "light rain",
+            "icon": "10d"
+        },
+        {
+            "temp": 11.28,
+            "visibility": 16093,
+            "city_name": "Bensonhurst",
+            "location": {
+                "lat": 40.5902,
+                "lng": -73.99325
+            },
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
         }
     ],
     "directions": {
-        "distance": "1,203 mi",
-        "duration": "18 hours 1 min",
+        "distance": "1,201 mi",
+        "duration": "17 hours 57 mins",
         "steps": [
             {
-                "html_instructions": "Head <b>west</b> on <b>Mall Dr</b> toward <b>Gulf Gate Pl</b>",
+                "html_instructions": "Head <b>south</b> on <b>Honore Ave</b>",
                 "duration": "1 min"
             },
             {
-                "html_instructions": "Turn <b>right</b> onto <b>Gateway Ave</b>",
-                "duration": "1 min"
+                "html_instructions": "Make a <b>U-turn</b>",
+                "duration": "4 mins"
             },
             {
-                "html_instructions": "Turn <b>right</b> after Jimmy John's (on the left)",
-                "duration": "1 min"
-            },
-            {
-                "html_instructions": "Continue onto <b>FL-72 E</b>/<b>Clark Rd</b><div style=\"font-size:0.9em\">Pass by 7-Eleven (on the right in 0.5&nbsp;mi)</div>",
-                "duration": "8 mins"
+                "html_instructions": "Turn <b>right</b> onto <b>FL-72 E</b>",
+                "duration": "2 mins"
             },
             {
                 "html_instructions": "Turn <b>left</b> to merge onto <b>I-75 N</b> toward <b>Tampa</b>",
@@ -395,15 +471,14 @@ export default {
             }
         ],
         "destination": "Jamaica, NY 11411, USA",
-        "origin": "Sarasota, FL 34231, USA",
+        "origin": "Sarasota, FL 34238, USA",
         "status": "OK"
     },
     "mapData": {
         "polylines": [
-            "unkeDv|rvN@p@?vA?|C?hBAjD",
-            "unkeDtnsvN[@qADo@@]Ag@Mw@WWI]EYAaA@W@YD_@FYHe@P]ROJQLMLQR[b@u@jAKLYj@Y`@",
-            "ghleDnwsvNMMSUe@c@a@_@mAgA_CwBCWYWcB}A_B{AKOOOWc@Wa@Q[s@cBEGCGAIAG",
-            "a~leDt~rvNGUOo@AKG[CME_@CUGs@?CEy@Ay@MQ?_E@g@AK@yE?gA@qD?yA@{A?M@{@JS?A?C@iA?_D@gHMW?_B?aB?_C?gD?kE?kB?_@@}@?}@LS@kB?aA?_@@k@@}A@W?mEAuICgFKW?O?M?y@?q@@qD?{@?W?qA@mD?Q?e@?m@?m@N_@?Q?mJ@y@?mB@kJ?mDFmJBiE?cB?_A?u@B{BCeECmC?oC@sD@aF?{@@kA@eD?Y?yC?{G?i@?mD@yK?w@@sD@wD?Q?kA@kC?W?cA?Y?oB?a@?[Aw@?qD?I?S?kB@uCAaD?_@?a@@gB?u@@W?aA?sBAu@?}D?[?cAAk@Ce@?IK}@AUIcAMkBCm@Cg@AY?WAc@?_@Aw@@}A?iA?u@?i@@kB?wC?}D@kC?eE",
+            "apgeDbjivN|@?VAbAGl@I`@IdA[",
+            "qfgeDhhivNKUi@P[HYD]F_@Bw@DuJBc@?yB@aB?}A@sC@}A?i@@uC@SAy@@gD@qA?o@@W@g@@aADw@D_DNaAD]@Y@W?}JD_C@yC@gY?uS?gF?S@eG?qF?W?oA?iAAW?s@CG?]A[Cs@Go@Ga@C]?m@AI?W?sC@",
+            "o~leDnjivN?cA?Y?oB?a@?[Aw@?qD?I?S?kB@uCAaD?_@?a@@gB?u@@W?aA?sBAu@?}D?[?cAAk@Ce@?IK}@AUIcAMkBCm@Cg@AY?WAc@?_@Aw@@}A?iA?u@?i@@kB?wC?}D@kC?eE",
             "c`meDt`fvNi@HiCb@k@Js@NcCb@uATyAR_@Dk@F_BLs@D}DHA?A@OJsECeDAkAAyLEWAa\\Oi@AgMMsf@eAiCG_^k@uB?G?]?aAAyI?uC@{@?oI?oBAcE?cIAeJ@g@AwA?yY?_BAuCCkKQeGIwCAqSAcCAqEGiKSu@Cw@A{a@oAeBEcAAmBG}@E_FOoDKiEMkEMcCCcCEsACkEE{GEqEE_CAyFGoQMqOMoYSqOMuIG}FEiFEaIG_AAmBAmBCgECeCCyCCiA?aAAeCCwAAyCCqDEsHEsFEmEC}B?cA@aA@mABa@@i@@q@Bg@BcBFa@Bg@DaADyALmAHs@Hq@Fe@FgAJOBk@Hq@HmAP}@LwATm@JeIxAcARcDj@kB\\kDn@kB\\_Cb@s@LiCd@aBZE?OBQDC?_BX{MbCkNfCiB\\yI|AcB^ueDbm@oF~@aDb@sD`@uAJsAL{@FgAHgCL_AB_DJyCD{C@uAAmA?yA?a@?oAAe@?eBA}@AeC?m@Cs@@sBGiA@qDAsPGyCCqA?cB?w[Ky@?_aA]e^My@AcA?_@?e@@i@Bi@B]Bg@Da@D_@Fg@F]F[F[Fa@Je@Ji@Pa@L_@L_@N{@ZqAf@iBr@kuA|h@mBt@qBv@}Bz@_C~@qCdAoCdA}FzB}Bz@{KfE_IvC}Bx@}Bx@oWtJcBn@iFlBgA`@m@Ty@\\k@Ve@T]Pg@X{@h@]Vk@^s@j@s@n@a@^e@f@e@f@c@f@i@r@[d@Y`@c@p@Yf@Wd@]p@c@`ASd@Ob@Qd@Qf@Wx@mIdYyEbPyJr\\qCpJ{@xCoCdJ[`A]`A[r@Wl@[n@e@|@U`@U^OVY^i@t@a@h@g@l@_@`@c@b@YXWTUR]Xo@f@y@j@{@h@e@Ve@Vi@VSJYLi@Rk@TwAb@ce@`Na@J_@LUFSFyOtEs^pKu@Tu@T_@J]JG@GBODSFg@NYHk@P_@J]L_QbF{DhA}Bn@qA\\g@JA?SFe@Fy@N_BVmAL{@HcEZyCLqABa@?mZIgOA{@?o^GuBBiBH}BHeBLyAL{H~@eALc@F}d@vFiKpAg@FwTpCiH|@o@HcAJc@BkBLW@kADc@@i@@C?mE@sD@Y@{@Bc@?mC@g@@cZDuJDQAyB@s@AcA?I?qAA{BI{@GoAQw@KaAQOCe@Im@MYIw@SA?CAw@Yc@Os@W]Mg@Ug@U[Oi@Y]SkAq@iMgI}AcA{A_A_Ao@yQoL{A_AuA}@oCmB_As@_@[{@s@gAaAmAiAyAqAqGgGeCcCg@e@QOIIIIQQECe@e@eBaBgRqQkBgB}@{@yAwA_ViUeAmAWWaEsEOS]e@kBcCoAeBeBiC{A_CeAeBg@_AkAuBqAcCwAoCaG_L{E_Jq@oAq@kAEEeBoCu@eAs@cA{@gA{@eAiAqAoAuA}@}@a@a@y@u@GIcA}@_H{Fc@_@mK{IeHaG_KqIiFkE_LmJuBeBg@c@[WiCyBg@c@sAiAiDsCe@a@cFgEcA{@cA}@mAiAoAoAqBsB}@_AsCcDeC}CeAuA_AqAsAmBCEaAyAsAyBaA_BkAwB_AgB{@eByA_DkAoCyBiFyCiHiWsm@qA_DqAiCq@mAkAoBqBuCsAeBgCsC}A{AgAaAg@a@i@c@i@a@aBmAgAs@oBiAwHuDoAo@A?}@a@a^{PaAc@aAe@_IsDeCgA{E}BmSyJaD}AiEuBkEyBm[cPqAq@yDoBg@Wo@[wf@}VyAw@gB_Ae@WcAm@sA_Ae@[cAw@e@_@iAaAs@o@o@m@m@s@}@_AW[wAcBm@u@Ya@KMs@eAoAqBq@kAs@wAa@y@o@uAkAuC}AuDkAwCwAmDkAoCiAuCUi@{IkT_@_AeBiEaE_KACm@yAw@mB}@wBiAsC_AwBoByE_C{FaE}JaBwD_@y@m@kAg@eAm@gAk@aAc@s@k@_As@eAm@}@_AqAm@y@s@y@mAyA{BcCEEmAmAiBcBaCsByAeAqCmBqA{@sAu@sAu@{@c@gB{@mB{@m@UqAe@mAYm@UEAkF_B_@K_AYsA[qAUuAUoAQkAOkAOcAK_AIsAI_BI_BIaBEkCCsBAa@?kA?qDAyE?cDAyDA_EAuEAwE?}BA}GA_C?w@?qDAsB?wAAuA?oAAY?uA?mB?uAA}A?wA?{AAsCAm@Ak@?oAG}AGg@Co@E[C]CaAKuAMgAMkAOi@Kw@Ky@OiAUq@MgAWkAYkA[}@W}@W_A[iAa@gAa@o@W}@_@_Aa@c@S_Ae@cAg@eAk@s@c@_Ai@cAo@a@YcAq@iAs@eAq@qBsAiAu@aEmCaBgAoAy@cAq@wBuA_Am@i@_@{@k@}ByAgAs@gAs@gAu@iAu@aAo@cJcGwA_Ac@YwBwAuCkB_C_B{AaAiBiAiSyMuBuA_BcAiAq@eAm@u@a@_Ag@wC{AiBy@qAk@{Aq@yB{@mBs@kAa@eDcAgBi@wA_@wBi@uBe@s@QuAYq]yH}NaDeH}AyKcCoH_BcB_@qBc@gDu@uCo@_AUyCo@kH_BqDy@iFiAkBa@_Dq@{Cq@yHcBaJqB_IeBqE{@aBYaBUm@Ky@K_BSoAMsAMwAMmAIaBMcCMcAE}CI_AAmCCiC?{MAqPAiHAcMAsC?oBCyBCaBGcCIgCMuCSiAK_BOcGs@_C[{KuAmPuBmQ}BgBQy@KCAu@K_AMeGw@kDe@}]qEeV{C{@MmHs@yAIw@GqAGqAGiAGkACiACkAAw@AkB?{A?oA?eABeMXmABeBDg@@mEJ}CHS?s`@`As@@A?q@BmSf@yLZA?eMZsFNgIP}Vn@qFNgIRoDHcEJwCHqDJeEJs@BeFLgBByDLkABwA@gA@qAAkAAsAGiBKoAKwAOw@G}@MeAQaAQy@QeAUq@Q_@Ks@SyAc@_Bs@mBw@wPsHw@]gEmByG{CaBs@cBu@eEkBeD{A_DwA_CeAs@OCACA{y@e_@oVyKeFyBoCgAgAa@gA]_Cs@uDgAaCm@sBg@qAY{A[yCi@qDi@cAMgAOyBUiD[cg@uDeFa@wL}@sCWoAKA?SC[CiAK}Js@eHg@eIo@wBMsMaAq@Eq@E_DWqBOsAKG?eAIke@oDeJq@oCSwBMg@EuDOgCI}ACoAAsB?u@?aD?cg@@{@?iA?C?sB?{I?cA?wV@gG?a@?S?}C?uG?aL@sE?gC?wK?iD?oG?qG@yE@uDD]@y@@{BFqELWBA?_Pv@}EVwAHgAFS@aADkAF{FZcAFA?eAFoCNw@Ho@Be@D]B}ABqBJgH^}BL_BF}BNmCPs@FaDd@gCb@aEdAaBh@wAb@iDvAcD~AoC|A_CbBuCxBm~@d|@oG`GqCpCcEzDmL~KA@u@p@[VOLk@d@A@IF}@p@uFxDYPmCzAQJmAh@_Ad@qAl@}@b@u@XmBt@wAd@}Ad@sA^_Cn@s@NcARKBiAR}B^qC^}KnAkCXoCZkGt@gI`A{Eh@qFl@oANgEb@s@Fq@FgDVcADaABqDBkC?eEGE?mCKwGW{AGyAG{AGqH[gBI{T}@oGSqAGmAG]A[?QAwGMY?kAEmCAkGDsCFaM\\aS`@}@DyFLyKRuBD}AFoBJaCR}C^wB^uB`@wA^mBh@uC`AkAd@sAj@qDlBq@^sA|@oAz@y@l@{AnAoAhAiAhAqBxBe@h@u@`AiAxAuAtB{@pAoInMuApBqBfCeBnBwAvAwCfC{BbBoD|BgB`AmB~@_Bp@_A\\aBj@}C|@k@NmBf@cDv@aDx@wAZkBf@kVfGgBd@aAT{Ct@aGzAq@P}A\\{A`@_Dx@kBd@a@J{A^yFvAmJ~BcAVeAV{Ct@cCl@cGzAcEbAi@LaAV}JdC{Bh@_Cl@mAZcJzBgM~CeVbGi@Li@Ng@No@Pw@V}@Xg@PSJy@\\WH{@`@s@Zi@Vu@`@mAp@y@f@e@Xc@Vc@Xe@Xe@Xc@Xe@VQLiC|AgBdAgAp@}A`AsEnC}Q`LwNxIOHcDpBiC|AuAz@kBhAcDnBwBpA_Al@_B`AsBnAsAv@[PWNk@Xq@^a@Pc@P[NQHQHUHa@P}@Zg@P}@Ze@Lo@Rc@Jw@Rk@LSF_@Da@FaATOB]HiALeALsBPy@DS@i@BgAFo@@a@@iA@aA?cA?s@AaACk@C_AEg@E[CqAKo@IiBUy@MuAWuAYoAYk@OoA]i@QkCy@uGsBmC{@qAa@}@YyBs@_AYSIkEyAsC}@uDkAwFkBgBi@{Bs@qAc@{@YQGuSyGsFeB{IsCwFiBiBk@wMeE]K}@]iCy@_Bi@gBm@GCGC_@MAAaC}@iBs@g@Ss@[y@]oAk@QIWKk@WyBeAaCkA_Ae@_D{AoCqAIEsAo@mG{CiHwDaBw@qBaAmAm@y@_@sAq@kAm@_By@aCsAoBiA}A}@e@[}AaAgAs@q@e@{CsB_Aq@kE}C_@YyE}C{F_EkE_D_G_EcD{BiJiG}HkFmEsC{AeAwAaA}PmLeFmDaBkAIGeAu@w@i@gAw@eAs@gAu@aBeAy@m@aAq@qCkB}B}AoCmByAcA{AcAa@UaAo@OIgAu@kBqAo@e@m@c@k@c@k@_@}@o@}@o@s@g@sByAgAw@[SaBgAkCgBaAq@m@a@eAs@q@c@}@m@gCeByB{AiKeHgAs@_@Y[U[SuFyDgAu@eAs@i@_@}@o@WO{@i@o@c@sCmBeAu@SMu@i@mCiBwAcAa@YyAcAWQg@]UQkBoAq@e@w@i@}AeAiCiBkBqAwAgAg@_@OMc@]OMe@_@a@_@y@q@cB}A_Ay@g@i@_A_AcAcAu@w@}@cAo@u@m@s@c@g@]a@]][]o@u@_AeAy@}@{@aAm@q@{@aAiBuBo@s@_@a@i@m@m@q@UYq@s@_@c@[[i@i@c@c@c@_@}@y@w@o@s@k@m@e@c@YUOQMa@Wg@[_@Uy@e@a@UYMu@a@e@Ua@QYMi@Uc@Qa@Qi@Sq@Ug@Qy@Wu@Sy@UcAWy@Uk@Os@QgA[WGWIe@Ki@Ou@Sq@QeAYe@MoA[oA]_AWi@Oi@Mq@Qw@Sk@Oe@M}@U_@Ki@Mw@Ok@Kg@I}@Ou@Ic@G[E_AKaAIe@CUCi@CQAYCUASA_@Ac@Aq@Ae@Aa@?s@?U?c@Ak@@{@?{@?aA?}@?S?{@?c@@e@?S?m@?O?{@?w@?s@?m@@a@?[?a@?i@?g@?q@?o@?o@?q@E_@Ac@?]?i@Am@Ac@?o@C[?e@CU?UAQAa@A_@CO?[CWA_AG}@E_CQiBMiD]sBUaBUsAQ_CYcDa@_@EmBSaDYoBOgAGqAIwAEaAEuCGwACiB?k@?{C@kBBuABkCJuJ`@{ER}ERoDNqADwAF_CJmBHcCJwCL_CFoABs@@yB@uC?y@AcCC{BGwAEoBGk@C_@AkAEu@EyEMsCK{CIEAu@CiCIIAsCIe@AgBGwFQe@Aa@CwNa@mAGC?A?iAEaK]a@C{FQiDKuFMqCIsBIE?cDK_ACSA_DM{AEo@Ca@AwFSyCKM?YC_BEoAGm@E}@E{@GeAI}@IyAOw@IkAMcAOsAS_AOkB[QCwAU{Cg@uCe@y@OyUyD}IyAKAwAWqASqAS{@Mo@I[EkAM}C]oCSmAI}BOcBGaBIg@Ae@Ck@AgACeCC}BAaB?uCA_QEgYGoOEaDAySEiMEkA?{OEeLA_MCkRE{IEwEAqLC_AAmB?wA?SAW?SAY?i@Ci@Ck@G_AIi@IWCYGOAi@KUGm@Ma@Mi@Og@Ok@Sy@[mAi@kAm@i@]_@WSKa@[c@[c@]q@m@aA_Aa@c@]_@{@gAy@mAs@kAg@}@e@aAk@qAeAuC]_Ai@yAk@_BSi@mAgDq@iBk@{AcAuCs@mB}@aCk@_BmAaDi@oA}@gBy@uAWe@u@gAk@u@SWi@o@_@a@oAoAsCoCuBqBaE{Dk@m@sEkEmBiBkBiB_A}@_B{AeDaDeCaCeB_BkHaH_B}A_@_@aA_AeD}CuAsAaAaAo@o@QS_AaAo@w@e@k@o@{@W][c@s@cA]m@QWACIMWa@GMOYWi@Q[OYe@cAYk@{@mB_@cAwAsD}AcE_@aAu@cBUe@Ua@[g@]i@]_@MSQS]a@m@q@o@i@SOUQMMaAw@m@a@eAo@iAk@k@Ya@OUISGa@Ok@Q_@KQEa@K_@Ia@I[EQCUEQAo@Ii@E_AEWAaACa@?aEAkEAqDAg@?iBAsD?gAAaB?s@?cHE}FKmBC}DIgDEwCEkDAiCAoBCk@Ai@Cm@Eg@EYCg@ISCm@Kk@Ki@MQG}@WUG{@[i@Ue@Sy@a@SMc@We@[c@YWS[W_@[e@a@g@g@g@c@u@u@s@m@a@c@OMQOq@k@y@m@c@[wA{@mAk@oAi@UI[Ka@Mi@Qe@My@QeAQaAOSCk@G_AI}@Eo@AcA?sA@mBJkBNoCTaDVcCRkBLw@Du@@i@?o@@u@Cc@Cw@Cs@E}@Ie@E[E_AOo@Ki@Ke@Ko@Qa@Ke@OeA]i@Sa@Og@Ug@WcAg@u@c@o@a@i@_@a@[wAiAe@a@_@]m@o@e@i@s@{@_@i@_@i@e@s@OWMSYi@Ua@o@qAeHwNkFsKsCcGoHiOaBeDiAyBi@eAc@y@e@y@_AaB{@sA{@uAw@mAm@}@sAkBqC}DcDoEaB}ByAsByAuBuAkBiBgCgAsAe@i@s@u@wAqAuAkAcAq@e@[o@a@i@Yg@Yc@SaAe@g@Sy@[k@ScAYcAYs@Qk@Mc@Iq@Kw@Kq@Im@Ec@Es@EwAGkAC_C?mJ?eL@}L?mF?wA?{@A_ACqAEi@C]CYCqAKi@Gm@GKAe@IaAMq@Mm@KcASk@Mq@Oi@Oa@KeDgAo@U}@]u@[w@]}@c@y@a@kAk@wC{AiCoAsE{BwAs@YQsCuA}Au@{XiNcGuC{EcC}@c@cFcCc@S]Oq@Yg@Qm@Ui@QCA{@Yc@Ms@Ug@MmAYoAYq@M[G_BU}@Mg@IeAKcAIgAI}@Eq@Aq@CsBCgD?o@?m@?yA?{A?_LCyD?cC?yA@yJAk@?}AAqT@yUAoP@mCAuP?gIAwFAuCCuA?oBAsHCcGAcG?}XDoB?wA?uA@_A?m@?m@Ak@Ak@C_AGaAMi@Gk@Ii@Mk@MUGSE_@M[I_A]y@_@y@_@g@Ww@e@s@g@g@_@c@]QQ][q@o@o@u@k@u@m@w@{@kAgEaGmPoU}@oAaEyFeBcCuCaE{AsB_@g@UW_@g@OQg@m@q@w@aBmBaAcAuAuAcAcAgAcAeAaAeA_AeA_Aw@q@gAaAu@o@gAaAyAqAyAqAiAaA{AqAyAsAwBmB_@]kFsE_BwAq@k@mCyBa@_@_LyJ{GaG[WeA}@c@_@s@i@g@_@eAs@k@_@g@[aAk@w@_@WOQIy@a@cAc@iAg@}@[yAi@mDqAsBu@_@Ma@MqBu@yCgAyEcBqAe@o@U}@[qCcAiAa@aEyAkAa@mR_H]MsBw@kBy@uAw@MGy@i@s@g@e@[wAkAeB}Aw@q@uBiBeA}@iBaB][uAoAYWWUcAcAo@q@}@eAeBsBEGm@w@aB{BqBqCyAsBeA{Ay@iAy@iAiAyAk@w@u@aA_AsA_BuBeCiDwAmByAqBwAoByAoBi@u@y@gAyByCu@aAcCeDkAaBiCmDuAkBmA}Ao@_AkA_BmBgCiA}Ac@k@kCoD}B_D}B{C}B{CmA_Bw@cAeAwAmCqDaByBgA{AeAwA}@mAuAmBaAwAyAqBiA}AgCkDaB{Bo@y@a@g@qA_BaAgAeBmBw@y@i@k@eAeAYYoAiA_A{@OOqAgAm@i@cAw@aCkBwAcA}AgAkAs@eAs@i@[a@WwCeB{DaCqBmA_EcCk@]yD}ByGaEmC_BaBcAiAq@_CwAaBaAoCcBuCeB_FwCkC_BkCaB_B_A_Ak@gBgAw@e@y@e@gAq@gDsBkAs@gAo@aBcAeAo@}A}@wFcDsAw@]U_BaAiTsM_MqHiAs@{CkBg@[_EaC}A_AyBqAyBuAgEgCiAq@YOaBcAYQ}CkBoBmAaCwAqDmBMIcAg@w@]}Au@{@]uAm@oJaEkKqECAuAi@aAc@}Aq@eAe@iEkB_@Qe@QqHaDmAi@wIuDgKmEmPeHq@YaL{EiGmCiBq@{Ak@qCmAqB{@_DsA{JgE}JgEqQsHcHwCeAe@kAe@aBq@SKmAg@]Oq@Ym@WGCo@WwB_AeBs@cBs@oAe@}@]{@Yu@Yk@QWKWIUIUG}Bq@k@OcCs@oF}A}@W{Ac@o[sIk`@oKgBg@k@OaAWeGcB{Aa@k@O_@KsDcAw@Sm@QiKqCeD}@wBm@cCo@mDaA}HuBSG_Co@k@OMEa@Ko@QGCcEiAsF{A}@UUGyBm@}Aa@uCy@wBk@cGaBuCu@_Co@aEeAwA]_AWcCq@kBe@sA_@uAc@WIg@QSIg@S_Ac@i@Y_@Qk@]OIg@]i@]q@g@OKaAw@iSkPcAy@MKu@o@[WmP}MuCaCmGaF{BeBgA{@sD{Ckk@ae@w@q@{AqAYUu@k@y@k@SOSM_@Sw@a@u@]_C}@}Ac@}@Uk@Ke@IOCUESCQCmAKc@CYC_@ASA_@A]Ag@?iB@ma@`A{Uh@_d@dAeTd@}Qb@yMZ{oBrE}LX_P^_O\\{f@jAmBDiO\\m_AxBcQ`@iCFaDHuABcA@[@}@?gA?}@A_@A{@EaAEq@CaAIk@Gk@EQCcAKyAUkBYyASyAUwBUeBOi@C{AIyACm@?wAAgA@aA@{ADiCN}@H_BLg@H{ATuCh@kAVe@BaHhBiDv@sDj@kANoAJmAJsAFsADwGRiN\\mJTa@@Y@O@m@@wNZiMVU@s@D_@Bi@DQ@M@QBa@DsAP{ATk@Hq@LcB`@i@L_@J[He@No@T}Bv@wBz@k@TWLYL}DjBoCrA}DlBoHnDwDjBkDbBkFfCgErBaAd@iAh@_Bv@qB`AcAf@kMhG{NdHcP|HgClAA?oB`A}BdAuBdAuBbAwBdA_CfAmI`E{@`@m@VmAj@}@\\cA`@cBp@cA\\cA\\_AZ[J_AX}@XoA\\uA^{@T{A^oAXgATs@Ne@H[FcAP{@LyATo@JgALeANyAN{ANsBNgDTcADcADoBH{ABu@@o@@kA@cA?m@?gA?mEAuM?cPAoKAC?sA?_FAkJAaB@k@?eBFi@BkAFgBNkAJqAP_ALo@Jk@JkAVu@Py@RiAZkA\\cA\\mAb@iAb@sAl@cFtBaHxCgSpIuVjKyLdFwJdEmN`G}IvDaDtAa@N}MzFyAn@{EpBuD|AyAp@eCdA{@^wAn@wBbA{At@SJy@`@kAl@}Av@m@ZiAl@}@d@g@XgAh@y@b@SLe@T]RiCrAgB~@WLm@ZcAh@e@Va@Ru@`@w@`@w@`@GBqAr@o@\\wBfAcAh@a@Tm@ZeB|@qBdAiCtA_Bx@uAr@gAl@GBuAr@_Bz@sAr@{@b@e@ViAj@u@`@eAh@g@Vq@^yAt@k@\\s@\\c@Ti@VIFe@Vg@VcAh@sBfA}Av@mCvAa@TcCnAoBdAeAh@uBfAkAp@_KhFs@\\gHtDeEvBiCtA{Ax@qBdAcAh@qBdASJqCvA_@RmDjB_Ad@]RsBfA}@b@uGfDm@Zu@^g@VaBx@UJQHkCjAmBz@aCbA[La@Po@XiAb@cA^gC`AaCz@{Ah@}@XmBn@}@XgBj@kA\\uA`@gBf@sBl@uBh@mBd@{A\\s@PyA\\{AZyCl@_Cf@uAXoDt@a@FYHOBG@I@G@K@YFo@LmAVcAReGlAcDp@}Cp@iATyDv@uAV}Cn@uFfAs@NG@WFE@UDyBd@{EbAmAToCj@}Cl@qAXiGpAuB`@_V~EcCd@eAR}Bd@eB^eEz@oB`@aAT}@RqA^k@Nu@Vc@LoBp@e@Ry@Z[L_@Nw@^y@^{@`@uOxHsGdDgMlG}DnBmDdB}BhA}@b@CBIB{DhBq@Xo@VeCdAqBx@yCjAw@ZqBx@qAh@_A`@u@ZcAd@w@`@iAh@g@X_Af@mAr@aAj@u@b@gCxAiBfAsBjAkLzG}ErCyCdBgSlLcOvIwKlGkDpBcAh@aAf@a@PYNo@Vs@Zu@XmA`@{@XmA\\{@TgAVq@N{@NsATuAR_ALgAJcAHs@Do@Da@@W@qADgB@gE?}DCmB@iBAcC?yPA}HAiDAgDAw@?aE?}FAyHAsJA{JCiB@wEA_IA}JAkDAwFA_NAaKA}FAwJAaIAyK?uOC}DAyICmJ?}VCqPCsUCuA?eE@eDB_EFaGNaABoEH}GLiBDmCBgA@}B?s@@cAAO?kCAqG?kJ?sDAaA?}WKoMCsk@K_L?aD?_GAeOGwGCaF?wJC{[G{EC{GAiTAw@?eAA{KEuKAcCAuFAkNCeGAuLCiGA{B?a@?qBA_A?eAAcA?eIAwBAi@@iGAo@?Y?E?oA?a@AmCA_BAoEAo@?cCAeCAO@mEAkA?sA?}@A}C?uGCiREeDAkD?mIC}@?cC?_CAS?[?Q?U@W@S?U@Y@M@I@S@M@]Bm@Hg@Dq@Ly@LUFg@JwA^SFQFi@RaA\\w@\\SL{@`@iAp@aB~@iAr@mAr@g@X{Az@_B`AoBjAoBjAgAl@k@Zc@VULg@T{@^wBt@sA^iAV_@Fu@LiALg@FeAFi@BU@U@]?qC?{E?qDCwEA}EAkA?qBAaFAwBAyRGqJAqHCsHAiCEgEAsF?yBAeCA_@?_@@K?O@Q?U@O?Q@U@S@w@FI@I?SBk@H_BTqARSDYF{@R{A^}GhB}Bj@sCr@_Dx@",
             "korqDdattNSEG?K?KBG@I@I@M@M@YDy@FwBNSB[DUD]Fc@JwA^cBb@",
             "gcsqDrettNQEEACCCACAAAAACCAAAAACACIS?i@@eA?k@?cAI[?W?cC?kC?m@?}C@qB?wA?a@AoE?qP@UA_A?iG@oA?kA?gAF_P?c@JM@Y?o@Dm@Be@Da@Ho@NaANi@FSVu@Tm@Xm@\\m@j@aA",
@@ -456,16 +531,16 @@ export default {
         "bounds": {
             "northeast": {
                 "lat": 40.6929824,
-                "lng": -73.7331081
+                "lng": -73.7294843
             },
             "southwest": {
-                "lat": 27.261386,
-                "lng": -82.513556
+                "lat": 27.241131,
+                "lng": -82.51436389999999
             }
         },
         "start_location": {
-            "lat": 27.261386,
-            "lng": -82.513556
+            "lat": 27.241131,
+            "lng": -82.4645014
         },
         "end_location": {
             "lat": 40.6929824,
