@@ -19,7 +19,7 @@ class Direction
 
         # open('google_dir.json', 'w') do |f|
         #     f.puts directions.to_json 
-        #   end
+        # end
 
                 
         if directions['status'] == 'OK'
@@ -70,7 +70,9 @@ class Direction
         
         weatherReports.prepend(get_weather(leg['steps'][0]['start_location']) )
 
-       { weather: weatherReports, directions: {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: steps, destination: leg['end_address'],  origin: leg['start_address'], status: directions['status']}, overview_polyline: polylines }
+        mapBounds = directions['routes'][0]['bounds']
+
+       { weather: weatherReports, directions: {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: steps, destination: leg['end_address'],  origin: leg['start_address'], status: directions['status']}, mapData:{ polylines: polylines, bounds: mapBounds }}
     end
 
     def get_weather(coordinates)

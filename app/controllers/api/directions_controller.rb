@@ -2,7 +2,7 @@ class Api::DirectionsController < ApplicationController
   def index
     directions = Direction.new(direction_params.to_h).fetch_directions
 
-        open('responseDevV5.js', 'w') do |f|
+        open('responseDevV6.js', 'w') do |f|
             f.puts directions.to_json 
         end
     

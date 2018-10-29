@@ -5,7 +5,7 @@ import AddressesInput from './components/AddressesInput'
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import TripInfo from './components/tripInfo';
-import DevResponse from './responseDevV5'
+import DevResponse from './responseDevV6'
 
 const styles = theme => ({
 
@@ -31,8 +31,8 @@ class App extends Component {
    super()
    this.dummyData = DevResponse;
    this.state = {
-     directions: this.dummyData.directions ,
-     overview_polyline: this.dummyData.overview_polyline,
+    directions: this.dummyData.directions ,
+    mapData: this.dummyData.mapData,
      origin: '',
      destination: '',
      weather: [],
@@ -69,7 +69,7 @@ class App extends Component {
     let currentComponent = <AddressesInput origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
 
     if (this.state.directions) {
-       currentComponent = <TripInfo directions={this.state.directions} overview_polyline={this.state.overview_polyline} weather={this.state.weather}   />
+       currentComponent = <TripInfo directions={this.state.directions} mapData={this.state.mapData} weather={this.state.weather}   />
     }
 
 

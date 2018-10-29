@@ -18,7 +18,7 @@ const styles = theme => ({
     }
 });
 
-const tripInfo = ({directions, weather, classes, overview_polyline}) => {
+const tripInfo = ({directions, weather, classes, mapData}) => {
     return(
         <div className={classes.root} >
         <Grid container  >
@@ -30,9 +30,9 @@ const tripInfo = ({directions, weather, classes, overview_polyline}) => {
             <Map googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1mGcbKQbw2QUvp2k8UtNafT5q90cE-ww&v=3.exp&libraries=geometry,drawing,places"
               loadingElement={<div style={{ height: `500px` }} />}
               containerElement={<div style={{ height: '75vh', width: '100%' }}  />}
-              mapElement={<div style={{ height: '75vh', width: '100%' }} />}  
+              mapElement={<div style={{ height: '85vh', width: '100%' }} />}  
               isMarkerShown={true}
-              overview_polyline={overview_polyline}
+              mapData={mapData}
             />
             </Grid >
         </Grid>
