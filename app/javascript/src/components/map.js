@@ -5,18 +5,19 @@ import { Polyline } from "react-google-maps";
 
 
  const MyMapComponent = withScriptjs(withGoogleMap((props) => {
+
+
+
       const polyines = props.mapData.polylines.map(((polyline, index) => <Polyline
-      path={google.maps.geometry.encoding.decodePath(polyline)} options={{strokeColor: '#FF0000', strokeOpacity: 1.0, geodesic: true, }} key={index} /> ))
+      path={google.maps.geometry.encoding.decodePath(polyline.path)} options={{strokeColor: polyline.color, strokeOpacity: 1.0, geodesic: true, }} key={index} /> ))
+
 
 
       const infoBoxes = props.weather.map((weatherReport, index) => {return (
-        <Marker defaultPosition={weatherReport.location} defaultIcon={{path: google.maps.SymbolPath.CIRCLE, scale: 2}} >
+        <Marker defaultPosition={weatherReport.location} key={index} defaultIcon={{path: google.maps.SymbolPath.CIRCLE, scale: 2}} >
           <InfoBox  >
-            <div style={{ backgroundColor: `yellow`, opacity: 0.75,maxHeight: '1em', maxWidth: '1em'  }}>
-              <div style={{ fontSize: `16px`, fontColor: `#08233B` }}>
+            <div style={{ backgroundColor: `yellow`, opacity: 0.75,maxHeight: '7em', maxWidth: '10em', overflow: 'hidden'  }}>
                 {weatherReport.description}
-                lorem ipsum
-              </div>
             </div>
           </InfoBox>
         </Marker>
@@ -30,8 +31,6 @@ import { Polyline } from "react-google-maps";
         mapElement && mapElement.fitBounds(bounds)
       }
 
-      
-
         return (<GoogleMap
           ref={mapRef}
           defaultZoom={8}
@@ -40,22 +39,6 @@ import { Polyline } from "react-google-maps";
         >
           <Marker position={props.mapData.end_location} />
           <Marker position={props.mapData.start_location} defaultIcon={{path: google.maps.SymbolPath.CIRCLE, scale: 5}} />
-          
-
-                  {/* <Marker defaultPosition={{
-                                lat: 40.8279183,
-                                lng: -73.8336214
-                            }} defaultIcon={{path: google.maps.SymbolPath.CIRCLE, scale: 2}} >
-          <InfoBox  >
-            <div style={{ backgroundColor: `yellow`, opacity: 0.75, padding: `12px` }}>
-              <div style={{ fontSize: `16px`, fontColor: `#08233B` }}>
-                Hello, Taipei!
-              </div>
-            </div>
-          </InfoBox>
-        </Marker> */}
-
-          {infoBoxes}
 
           {polyines}
 

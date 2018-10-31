@@ -26,7 +26,7 @@ class Direction
             parse_steps(directions)
 
         else
-            {status: directions['status']}
+            {directions_status: directions['status']}
         end
         
     end
@@ -35,17 +35,40 @@ class Direction
 
     private
 
+    def get_polyline_color weather_id 
+        if  (weather_id  < 300 )
+            #thunderstorm
+            'red'
+        elsif (weather_id < 600)
+            #rain
+            'blue'
+        elsif (weather_id  < 700) 
+            #snow
+            'brown'
+        else 
+            'green'
+        end
+    end
+
     def parse_steps(directions)
         leg = directions['routes'][0]['legs'][0]
         
         meter_counter = 0
         weatherReports = []
-        polylines = []
+        polylines = [{}]
+        
+        first_step_weather = get_weather(leg['steps'][0]['start_location'])
+        weatherReports.prepend(first_step_weather)
+        
+         weather_color = get_polyline_color(first_step_weather['id'])
+
+         polylines[0]['color'] = weather_color
+         polylines[0]['path'] = leg['steps'][0]['polyline']['points']
 
         steps = leg['steps'].map do |step|
             polyline = step['polyline']['points']
-            polylines << polyline
-            if (meter_counter + step['distance']['value']) >= 100000
+            
+            if (meter_counter + step['distance']['value']) >= 100000 
                 points = GoogleMapsService::Polyline.decode(polyline)
                 points_distance = 0
 
@@ -55,23 +78,28 @@ class Direction
                        
                         meter_counter = 0
                         points_distance = 0
-                        weatherReports << get_weather(points[index + 1].stringify_keys)
+                        weather_report = get_weather(points[index + 1].stringify_keys)
+                        weather_color = get_polyline_color(weather_report['id'])
+                        weatherReports << weather_report
+                        
+                        
+
                     end
                 end 
-
+                polylines << {path: polyline, color: weather_color}
                 meter_counter += points_distance
                 {html_instructions: step['html_instructions'], duration: step['duration']['text']}               
             else
+                polylines << {path: polyline, color: weather_color}
                 meter_counter += step['distance']['value']
                 {html_instructions: step['html_instructions'], duration: step['duration']['text']}
             end
         end
-        
-        weatherReports.prepend(get_weather(leg['steps'][0]['start_location']) )
+
 
         mapBounds = directions['routes'][0]['bounds']
 
-       { weather: weatherReports, directions: {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: steps, destination: leg['end_address'],  origin: leg['start_address'], status: directions['status']}, mapData:{ polylines: polylines, bounds: mapBounds, start_location: leg['start_location'], end_location: leg['end_location']}}
+       { weather: weatherReports, directions: {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: steps, destination: leg['end_address'],  origin: leg['start_address']}, mapData:{ polylines: polylines, bounds: mapBounds, start_location: leg['start_location'], end_location: leg['end_location']}, directions_status: directions['status']}
     end
 
     def get_weather(coordinates)
