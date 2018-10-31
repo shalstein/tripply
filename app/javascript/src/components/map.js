@@ -9,21 +9,8 @@ import { Polyline } from "react-google-maps";
 
 
       const polyines = props.mapData.polylines.map(((polyline, index) => <Polyline
-      path={google.maps.geometry.encoding.decodePath(polyline.path)} options={{strokeColor: polyline.color, strokeOpacity: 1.0, geodesic: true, }} key={index} /> ))
+      path={google.maps.geometry.encoding.decodePath(polyline.path)} options={{strokeColor: polyline.color, strokeOpacity: 1.0, geodesic: true, strokeWeight: 3.5 }} key={index} /> ))
 
-
-
-      const infoBoxes = props.weather.map((weatherReport, index) => {return (
-        <Marker defaultPosition={weatherReport.location} key={index} defaultIcon={{path: google.maps.SymbolPath.CIRCLE, scale: 2}} >
-          <InfoBox  >
-            <div style={{ backgroundColor: `yellow`, opacity: 0.75,maxHeight: '7em', maxWidth: '10em', overflow: 'hidden'  }}>
-                {weatherReport.description}
-            </div>
-          </InfoBox>
-        </Marker>
-      )
-
-      })
 
       const mapRef = mapElement => { 
         const {southwest, northeast} = props.mapData.bounds
