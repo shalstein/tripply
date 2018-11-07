@@ -70,24 +70,35 @@ class Direction
         {divided_points: one_hundered_km_points, remaining_km: points_distance_counter, remaining_points: points[previous_index..-1]}
     end
 
-    def divide_polyline_to_hundered_km(steps)
+    def construct_encoded_polyline_with_color(decoded_polyline, weather_id)
+        {points: GoogleMapsService::Polyline.encode(decoded_polyline), color: get_polyline_color(weather_id)}
+    end
+
+    def divide_polyline_to_hundered_km_with_color(steps)
         polyline_distance_counter = 0
         polyline_temp_bucket = []
         divided_polylines = []
+        dircetions = []
         steps.each do |step|
             polyline_distance = step['distance']['value']
             points = GoogleMapsService::Polyline.decode(step['polyline']['points'])
             if polyline_distance + counter >= 100000
                 divided_points_with_counter = split_points_to_100km(points, polyline_distance_counter)
                 one_hundered_km_points = polyline_temp_bucket.flatten.concat(divided_points_with_counter['divided_points'])
-                divided_polylines << one_hundered_km_points
+                weather_report = get_weather(one_hundered_km_points[0])
+
+                divided_polylines << construct_encoded_polyline_with_color(points, weather_report['id'])
                 polyline_temp_bucket = divided_points_with_counter['remaining_points'] 
                 polyline_distance_counter = divided_points_with_counter['remaining_km']
             else
               polyline_temp_bucket << points
             end
             polyline_distance_counter += polyline_distance
+            directions << {html_instructions: step['html_instructions'], duration: step['duration']['text']}
         end
+        destination_weather = get_weather(polyline_temp_bucket[-1])
+        divided_polylines << construct_encoded_polyline_with_color(polyline_temp_bucket, destination_weather)
+        {polylines: divided_polylines, directions: directions}
     end
     def parse_steps(directions)
         leg = directions['routes'][0]['legs'][0]
@@ -184,7 +195,7 @@ class Direction
         weather = JSON.parse(response.body)
 
         # { temp: weather['main']['temp'], visibility: weather['visibility'], city_name: weather['name'], location: coordinates}.merge(weather['weather'][0])
-        {weather['weather'][0]}
+        weather['weather'][0]
     end
 
     def step_with_weather(step)
