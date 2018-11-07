@@ -53,27 +53,77 @@ class Direction
     def get_weather_at_polyline_interval(points, counter)
     end
 
+    def get_positions_of_hundered_kilometer_intervals_with_remainder(polyline, counter)
+    end
+
+    def split_points_to_100km(points, polyline_distance_counter)
+        points_distance_counter = 0
+        one_hundered_km_points = []
+        previous_index = 0
+        (points.length - 1).times do |current_index|
+            points_distance_counter += SphericalUtil.computeDistanceBetween(points[current_index], points[current_index + 1])
+            if points_distance_counter + polyline_distance_counter >= 100000
+                one_hundered_km_points << points[previous_index..current_index]
+                previous_index = current_index
+            end
+        end
+        {divided_points: one_hundered_km_points, remaining_km: points_distance_counter, remaining_points: points[previous_index..-1]}
+    end
+
+    def divide_polyline_to_hundered_km(steps)
+        polyline_distance_counter = 0
+        polyline_temp_bucket = []
+        divided_polylines = []
+        steps.each do |step|
+            polyline_distance = step['distance']['value']
+            points = GoogleMapsService::Polyline.decode(step['polyline']['points'])
+            if polyline_distance + counter >= 100000
+                divided_points_with_counter = split_points_to_100km(points, polyline_distance_counter)
+                one_hundered_km_points = polyline_temp_bucket.flatten.concat(divided_points_with_counter['divided_points'])
+                divided_polylines << one_hundered_km_points
+                polyline_temp_bucket = divided_points_with_counter['remaining_points'] 
+                polyline_distance_counter = divided_points_with_counter['remaining_km']
+            else
+              polyline_temp_bucket << points
+            end
+            polyline_distance_counter += polyline_distance
+        end
+    end
     def parse_steps(directions)
         leg = directions['routes'][0]['legs'][0]
         polylines = []
-        counter = 0
+        directions = []        
         weather_conditions = [{condition: '', start_position: '', end_position: ''}]
-        directions = leg['steps'].map do  |step|
+
+        counter = 0
+
+        leg['steps'].each do  |step|
             polyline = step['polyline']['points']
             
             if counter + step['distance']['value'] >= 100000
-                polyline_intervals_and_update_counter =  get_positions_of_hundered_kilometer_intervals_with_counter_update(polyline, counter)
-                counter = polyline_intervals_and_update_counter['counter']
-                positions = polyline_intervals_and_update_counter['positions']
-                weather_conditions_with_polylines = update_weather_conditions_and_create_polylines(positions, weather_conditions)
+                # polyline_intervals_and_remainder =  get_positions_of_hundered_kilometer_intervals_with_remainder(polyline, counter)
+
+                counter = polyline_intervals_and_remainder['counter']
+                positions = polyline_intervals_and_remainder['positions']
+                # weather_conditions_with_polylines = update_weather_conditions_and_create_polylines(positions, weather_conditions)
+                weather_reports = get_weather(positions) 
+                weather_conditions = update_weather_conditions(weather_reports, weather_conditions)
+                if weather_reports.length <= 1
+                    polyline << {points: polyline, color: get_polyline_color(weather_reports[0]['id'])}
+                else
+                    break_polyline_on_100km()
+                end
+
+
                 weather_conditions = weather_conditions_with_polylines['weather_conditions']
-                polylines = we
+                polylines = we6
             else
 
             end
 
             # polyline = {points: step['polyline']['points'], color: get_polyline_color()}
             polylines << polyline
+            directions << {html_instructions: step['html_instructions'], duration: step['duration']['text']}
 
         end
     end
@@ -133,7 +183,8 @@ class Direction
         response = Faraday.get("https://api.openweathermap.org/data/2.5/weather?lat=#{coordinates['lat']}&lon=#{coordinates['lng']}&APPID=#{ENV['WEATHER_API_KEY']}&units=metric")
         weather = JSON.parse(response.body)
 
-        { temp: weather['main']['temp'], visibility: weather['visibility'], city_name: weather['name'], location: coordinates}.merge(weather['weather'][0])
+        # { temp: weather['main']['temp'], visibility: weather['visibility'], city_name: weather['name'], location: coordinates}.merge(weather['weather'][0])
+        {weather['weather'][0]}
     end
 
     def step_with_weather(step)
