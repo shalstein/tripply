@@ -19,11 +19,13 @@ class Direction
 
         # open('google_dir.json', 'w') do |f|
         #     f.puts directions.to_json 
-        # end
+        # endq
 
                 
         if directions['status'] == 'OK'
-            divide_polylines_and_parse_directions(directions['routes'][0]['legs'][0]['steps'])
+            data = divide_polylines_and_parse_directions(directions['routes'][0])
+            data['directions_status'] = directions['status']
+            data
         else
             {directions_status: directions['status']}
         end
@@ -70,35 +72,37 @@ class Direction
     end
 
     def construct_encoded_polyline_with_color(decoded_polyline, weather_id)
-        
         {points: GoogleMapsService::Polyline.encode(decoded_polyline), color: get_polyline_color(weather_id)}
     end
 
-    def divide_polylines_and_parse_directions(steps)
+    def divide_polylines_and_parse_directions(route)
         polyline_distance_counter = 0
         polyline_temp_bucket = []
         divided_polylines = []
         directions = []
-        steps.each do |step|
+        leg = route['legs'][0]
+        leg['steps'].each do |step|
             polyline_distance = step['distance']['value']
             points = GoogleMapsService::Polyline.decode(step['polyline']['points'])
             if polyline_distance + polyline_distance_counter >= 100000
                 divided_points_with_counter = split_points_to_100km(points, polyline_distance_counter)
-                one_hundered_km_points = polyline_temp_bucket.flatten.concat(divided_points_with_counter['divided_points'])
+                one_hundered_km_points = polyline_temp_bucket.flatten.concat(divided_points_with_counter[:divided_points].flatten)
                 weather_report = get_weather(one_hundered_km_points[0])
 
                 divided_polylines << construct_encoded_polyline_with_color(points, weather_report['id'])
-                polyline_temp_bucket = divided_points_with_counter['remaining_points'] 
-                polyline_distance_counter = divided_points_with_counter['remaining_km']
+                polyline_temp_bucket = divided_points_with_counter[:remaining_points] 
+                polyline_distance_counter = divided_points_with_counter[:remaining_km]
             else
               polyline_temp_bucket << points
+              polyline_distance_counter += polyline_distance
             end
-            polyline_distance_counter += polyline_distance
             directions << {html_instructions: step['html_instructions'], duration: step['duration']['text']}
         end
         destination_weather = get_weather(polyline_temp_bucket[-1][-1])
-        divided_polylines << construct_encoded_polyline_with_color(polyline_temp_bucket, destination_weather['id'])
-        {polylines: divided_polylines, directions: directions}
+        divided_polylines << construct_encoded_polyline_with_color(polyline_temp_bucket.flatten, destination_weather['id'])
+
+        
+        { directions: {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: directions, destination: leg['end_address'],  origin: leg['start_address'] }, mapData: { polylines: divided_polylines, bounds: route['bounds'], start_location: leg['start_location'], end_location: leg['end_location']}}
     end
 
     # def parse_steps(directions)
