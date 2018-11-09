@@ -33,8 +33,8 @@ class App extends Component {
    this.state = {
     directions: null ,
     mapData: {polylines:[], bounds: {} },
-     origin: '',
-     destination: '',
+     origin: '11411',
+     destination: 'albany ny',
      weather: [],
    }
   }
