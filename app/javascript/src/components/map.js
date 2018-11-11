@@ -9,7 +9,7 @@ import { Polyline } from "react-google-maps";
 
 
       const polyines = props.mapData.polylines.map(((polyline, index) => <Polyline
-      path={google.maps.geometry.encoding.decodePath(polyline.points)} options={{strokeColor: polyline.color, strokeOpacity: 1.0, geodesic: true, strokeWeight: 3.5 }} key={index} /> ))
+      path={google.maps.geometry.encoding.decodePath(polyline.points)} options={{strokeColor: polyline.color, strokeOpacity: 0.8, geodesic: true, strokeWeight: 6 }} key={index} /> ))
 
 
       const mapRef = mapElement => { 
@@ -21,7 +21,7 @@ import { Polyline } from "react-google-maps";
         return (<GoogleMap
           ref={mapRef}
           defaultZoom={8}
-          defaultOptions={{gestureHandling: 'greedy'}}
+          defaultOptions={{gestureHandling: 'greedy', mapTypeControl: false, streetViewControl: false}}
 
         >
           <Marker position={props.mapData.end_location} />

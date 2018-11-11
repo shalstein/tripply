@@ -27,17 +27,30 @@ const styles = theme => ({
 
 
 class App extends Component {
+  // constructor(){
+  //  super()
+  //  this.dummyData = DevResponse;
+  //  this.state = {
+  //   directions: null ,
+  //   mapData: {polylines:[], bounds: {} },
+  //    origin: '',
+  //    destination: '',
+  //    weather: [],
+  //  }
+  // }
+
+
   constructor(){
-   super()
-   this.dummyData = DevResponse;
-   this.state = {
-    directions: null ,
-    mapData: {polylines:[], bounds: {} },
-     origin: '11411',
-     destination: 'albany ny',
-     weather: [],
+    super()
+    this.dummyData = DevResponse;
+    this.state = {
+     directions: this.dummyData.directions ,
+     mapData: this.dummyData.mapData,
+      origin: '',
+      destination: '',
+      weather: [],
+    }
    }
-  }
 
   handleAddressChange = (event, t) => {
     this.setState({[event.target.name]: event.target.value})

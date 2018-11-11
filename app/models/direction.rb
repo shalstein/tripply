@@ -2,7 +2,6 @@ require 'google_maps_service/polyline'
 
 class Direction 
     include ActiveModel::Model
-
     attr_accessor :origin, :destination
 
     def initialize(addresses_hash)
@@ -19,11 +18,10 @@ class Direction
         # open('google_dirV2.json', 'w') do |f|
         #     f.puts directions.to_json 
         # end
-
-                
         if directions['status'] == 'OK'
             data = divide_polylines_and_parse_directions(directions['routes'][0])
             data['directions_status'] = directions['status']
+            puts @n_counter
             data
         else
             {directions_status: directions['status']}

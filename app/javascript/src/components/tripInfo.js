@@ -30,7 +30,7 @@ const tripInfo = ({directions, weather, classes, mapData}) => {
             <Grid item xs={9} className={classes.mapItem} >
                 <Map googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1mGcbKQbw2QUvp2k8UtNafT5q90cE-ww&v=3.exp&libraries=geometry,drawing,places"
                 loadingElement={<div style={{ height: `500px` }} />}
-                containerElement={<div style={{ height: '75vh', width: '100%' }}  />}
+                containerElement={<div style={{ height: '75vh', width: '100%' }} />}
                 mapElement={<div style={{ height: '85vh', width: '100%' }} />}  
                 mapData={mapData}
                 weather={weather}
