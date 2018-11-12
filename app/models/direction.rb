@@ -39,10 +39,10 @@ class Direction
             '#910136'
         elsif (weather_id < 400)
             #dirzzle
-            '#88fff7'
+            '#016b91'
         elsif (weather_id < 600)
             #rain
-            '#016b91'
+            '#140191'
         elsif (weather_id  < 700) 
             #snow
             '#912f01'
