@@ -5,7 +5,7 @@ import AddressesInput from './components/AddressesInput'
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import TripInfo from './components/tripInfo';
-import DevResponse from './responseDevV10'
+import DevResponse from './responseDevV10.3'
 
 const styles = theme => ({
 
@@ -36,7 +36,7 @@ class App extends Component {
   //   mapData: {polylines:[], bounds: {} },
   //    origin: '',
   //    destination: '',
-  //    weather: [],
+  //    weather: {},
   //  }
   // }
 
@@ -49,7 +49,7 @@ class App extends Component {
      mapData: this.dummyData.mapData,
       origin: '',
       destination: '',
-      weather: [],
+      weather: this.dummyData.weather_conditions,
     }
    }
 

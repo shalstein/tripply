@@ -75,7 +75,7 @@ class Direction
         if new_weather_conditions[weather_report['main']].nil?
             new_weather_conditions[weather_report['main']] = 0
         end
-        distance_in_km = distance * 0.001
+        distance_in_km = (distance * 0.001).floor
         new_weather_conditions[weather_report['main']] += distance_in_km
         new_weather_conditions
 
@@ -121,9 +121,9 @@ class Direction
         response = Faraday.get("https://api.openweathermap.org/data/2.5/weather?lat=#{stringify_coordinates['lat']}&lon=#{stringify_coordinates['lng']}&APPID=#{ENV['WEATHER_API_KEY']}&units=metric")
         weather = JSON.parse(response.body)
         
-        open('weather.json', 'a') do |f|
-            f.puts weather.to_json 
-        end        
+        # open('weather.json', 'a') do |f|
+        #     f.puts weather.to_json 
+        # end        
 
         # { temp: weather['main']['temp'], visibility: weather['visibility'], city_name: weather['name'], location: coordinates}.merge(weather['weather'][0])
         weather['weather'][0]

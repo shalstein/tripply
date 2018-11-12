@@ -24,7 +24,7 @@ const tripInfo = ({directions, weather, classes, mapData}) => {
         <div className={classes.root} >
         <Grid container  >
             <Grid className={classes.table} item xs={3}>
-                    <DirectionsTable directions={directions} />
+                    <DirectionsTable directions={directions} weather={weather} />
             </Grid>
 
             <Grid item xs={9} className={classes.mapItem} >
