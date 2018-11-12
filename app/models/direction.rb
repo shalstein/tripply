@@ -36,15 +36,19 @@ class Direction
     def get_polyline_color weather_id 
         if  (weather_id  < 300 )
             #thunderstorm
-            'red'
+            '#910136'
+        elsif (weather_id < 400)
+            #dirzzle
+            '#88fff7'
         elsif (weather_id < 600)
             #rain
-            'blue'
+            '#016b91'
         elsif (weather_id  < 700) 
             #snow
-            'brown'
+            '#912f01'
         else 
-            'green'
+            #clear
+            '#40a601'
         end
     end
 
