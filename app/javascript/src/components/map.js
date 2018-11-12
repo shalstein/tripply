@@ -23,8 +23,8 @@ const styles = theme => ({
 
  const MyMapComponent = withScriptjs(withGoogleMap((props) => {
 
-      const polyines = props.mapData.polylines.map(((polyline, index) => <Polyline
-      path={google.maps.geometry.encoding.decodePath(polyline.points)} options={{strokeColor: polyline.color, strokeOpacity: 0.8, geodesic: true, strokeWeight: 6 }} key={index} /> ))
+      const polyines = props.mapData.polylines.map((polyline, index) => <Polyline
+      path={google.maps.geometry.encoding.decodePath(polyline.points)} options={{strokeColor: polyline.color, strokeOpacity: 0.8, geodesic: true, strokeWeight: 6 }} key={index} /> )
 
 
       const mapRef = mapElement => { 

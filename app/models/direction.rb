@@ -11,7 +11,7 @@ class Direction
 
     def fetch_directions 
 
-        response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}&key=#{ENV['google_directions_key']}"
+        response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}&key=#{ENV['google_directions_key']}&units=metric"
         
         directions = JSON.parse(response.body)
 
@@ -70,11 +70,23 @@ class Direction
         {points: GoogleMapsService::Polyline.encode(decoded_polyline), color: get_polyline_color(weather_id)}
     end
 
+    def update_weather_conditions_distance(weather_report, distance, weather_conditions)
+        new_weather_conditions = weather_conditions.clone
+        if new_weather_conditions[weather_report['main']].nil?
+            new_weather_conditions[weather_report['main']] = 0
+        end
+        distance_in_km = distance * 0.001
+        new_weather_conditions[weather_report['main']] += distance_in_km
+        new_weather_conditions
+
+    end
+
     def divide_polylines_and_parse_directions(route)
         polyline_distance_counter = 0
         polyline_temp_bucket = []
         divided_polylines = []
         directions = []
+        weather_conditions_distance = {}
         leg = route['legs'][0]
         leg['steps'].each do |step|
             polyline_distance = step['distance']['value']
@@ -83,6 +95,10 @@ class Direction
                 divided_points_with_counter = split_points_to_100km(points, polyline_distance_counter)
                 one_hundered_km_points = polyline_temp_bucket.flatten.concat(divided_points_with_counter[:divided_points].flatten)
                 weather_report = get_weather(one_hundered_km_points[0])
+                weather_conditions_distance = update_weather_conditions_distance(weather_report, (polyline_distance + polyline_distance_counter - divided_points_with_counter[:remaining_km]) , weather_conditions_distance )
+                
+
+                puts weather_conditions_distance
                 divided_polylines << construct_encoded_polyline_with_color(one_hundered_km_points, weather_report['id'])
                 polyline_temp_bucket = divided_points_with_counter[:remaining_points] 
                 polyline_distance_counter = divided_points_with_counter[:remaining_km]
@@ -93,10 +109,11 @@ class Direction
             directions << {html_instructions: step['html_instructions'], duration: step['duration']['text']}
         end
         destination_weather = get_weather(polyline_temp_bucket[-1][-1])
+        weather_conditions_distance = update_weather_conditions_distance(destination_weather, polyline_distance_counter, weather_conditions_distance)
         divided_polylines << construct_encoded_polyline_with_color(polyline_temp_bucket.flatten, destination_weather['id'])
 
         
-        { directions: {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: directions, destination: leg['end_address'],  origin: leg['start_address'] }, mapData: { polylines: divided_polylines, bounds: route['bounds'], start_location: leg['start_location'], end_location: leg['end_location']}}
+        { directions: {distance: leg['distance']['text'], duration: leg['duration']['text'], steps: directions, destination: leg['end_address'],  origin: leg['start_address'] }, mapData: { polylines: divided_polylines, bounds: route['bounds'], start_location: leg['start_location'], end_location: leg['end_location']}, weather_conditions: weather_conditions_distance}
     end
 
     def get_weather(coordinates)
@@ -104,9 +121,9 @@ class Direction
         response = Faraday.get("https://api.openweathermap.org/data/2.5/weather?lat=#{stringify_coordinates['lat']}&lon=#{stringify_coordinates['lng']}&APPID=#{ENV['WEATHER_API_KEY']}&units=metric")
         weather = JSON.parse(response.body)
         
-        # open('weather.json', 'a') do |f|
-        #     f.puts weather.to_json 
-        # end        
+        open('weather.json', 'a') do |f|
+            f.puts weather.to_json 
+        end        
 
         # { temp: weather['main']['temp'], visibility: weather['visibility'], city_name: weather['name'], location: coordinates}.merge(weather['weather'][0])
         weather['weather'][0]
