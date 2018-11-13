@@ -58,7 +58,9 @@ class App extends Component {
   }
 
   handleSearchClick = (event, t) => {
-
+    if (this.state.destination.trim() === '' || this.state.origin.trim() === 'nil'){
+      throw new Error('cannot search empty input')
+    }
     fetch(`/api/directions/?origin=${this.state.origin}&destination=${this.state.destination}`)
     .then(response => response.json())
     

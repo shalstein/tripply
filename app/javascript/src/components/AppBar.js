@@ -22,7 +22,7 @@ function appBar(props) {
       <AppBar position="static" color="default">
         <Toolbar>
           <Typography className= {classes.flex} variant="headline" color="primary">
-            Tripply
+            Tripcast
           </Typography>
          { isDirections && <Button  color='inherit' onClick={handleNewSearchClick}>New Search</Button>}
         </Toolbar>
