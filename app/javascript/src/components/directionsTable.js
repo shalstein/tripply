@@ -53,12 +53,14 @@ function DirectionsTable({classes, directions, weather}) {
             </TableCell>
           </TableRow>
           
-          <TableCell>
-            <Typography variant='title' >Directions</Typography>
-          </TableCell>
+          <TableRow>
+            <TableCell>
+              <Typography variant='title' >Directions</Typography>
+            </TableCell>
+          </TableRow>
           
           {rows}
-            
+
         </TableBody>
       </Table>
   );
