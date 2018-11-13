@@ -5,10 +5,11 @@ import Paper from '@material-ui/core/Paper'
 import SearchIcon from '@material-ui/icons/Search'
 import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const styles = theme => ({
   root: {
-    width: '33%',
+    width: '31%',
     margin: 'auto',
     padding: theme.spacing.unit * 2,
   },
@@ -17,8 +18,6 @@ const styles = theme => ({
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
-    // padding: theme.spacing.unit *2,
-
   },
   textField: {
     width: '100%',
@@ -27,8 +26,10 @@ const styles = theme => ({
     paddingBottom: theme.spacing.unit * 2,
   },
 
-  button: {
-    margin: theme.spacing.unit,
+  progress: {
+    position: 'absolute',
+    top: '0.4em',
+    left: '3.5em',
   }
   });
 
@@ -56,15 +57,17 @@ const styles = theme => ({
 
                 <TextField
                 name='destination'
-                label="Ariving At"
+                label="Ariving To"
                 className={classes.textField}
                 margin='normal'
                 value={this.props.destination}
                 onChange={this.props.handleAddressChange}
                 /> 
 
-                <Button variant="contained" onClick={this.props.handleSearchClick}  color="primary" aria-label="search" className={classes.button}>GET TRIPCAST</Button>
-
+                <div name='fetch-wrapper' style={{position: 'relative'}}>
+                  <Button disabled={this.props.loading} variant="contained" onClick={this.props.handleSearchClick}  color="primary" aria-label="search" className={classes.button}>GET TRIPCAST</Button>
+                {this.props.loading && <CircularProgress size={24} className={classes.progress} />}
+                </div>
               </form>
             </Paper>
           )
@@ -72,10 +75,3 @@ const styles = theme => ({
   }
 
   export default withStyles(styles)(AddressesInput)
-
-  // //{
-  //   width: '100%',
-  //   marginTop: theme.spacing.unit * 3,
-  //   overflowX: 'auto',
-  //   paddingBottom: theme.spacing.unit * 3
-  // }
