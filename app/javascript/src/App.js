@@ -62,7 +62,7 @@ class App extends Component {
   }
 
   updateIsloading = () => { 
-    this.setState(previousState => {isLoading: !previousState.isLoading})
+    this.setState(previousState => ({isLoading: !previousState.isLoading}))
   }
 
   validateAddressInputs = () => {
@@ -75,28 +75,33 @@ class App extends Component {
   }
 
   handleSearchClick = (event, t) => {
-    this.updateIsloading()
     
-    if (this.validateAddressInputs()){
-    fetch(`/api/directions/?origin=${this.state.origin}&destination=${this.state.destination}`)
+    this.updateIsloading();
+    new Promise((resolve, reject) => {
+      if (this.validateAddressInputs()) {
+         resolve()
+      }
+       reject('Cannot search empty addresses')
+    })
+    .then(() => {
+      return fetch(`/api/directions/?origin=${this.state.origin}&destination=${this.state.destination}`)
+    })    
     .then(response => response.json())
     .then(tripData => { 
       if (tripData.directions_status !== 'OK'){
         throw new Error(`API status: ${tripData.directions_status}`)
       }
-       this.setState({directions: tripData.directions, weather: tripData.weather_conditions, mapData: tripData.mapData}, () => console.log('update state', this.state))
+       this.setState({directions: tripData.directions, weather: tripData.weather_conditions, mapData: tripData.mapData})
     })
     .catch(e => console.error(e))
-    }
-    this.updateIsloading()
+    .finally(() => {
+      this.updateIsloading()
+    })
+    
   }
 
   handleNewSearchClick = event => {
     this.setState({directions: null, origin: '', destination: ''})
-  }
-
-  componentDidUpdate = (previous_props, previous_state) => {
-    console.log(this.state)
   }
 
   render() {

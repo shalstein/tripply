@@ -1,0 +1,260 @@
+[
+    {
+        "coord": {
+            "lon": -73.74,
+            "lat": 40.69
+        },
+        "weather": [
+            {
+                "id": 800,
+                "main": "Clear",
+                "description": "clear sky",
+                "icon": "01d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 3.3,
+            "pressure": 1030,
+            "humidity": 37,
+            "temp_min": 1.7,
+            "temp_max": 4.4
+        },
+        "visibility": 16093,
+        "wind": {
+            "speed": 8.2,
+            "deg": 310,
+            "gust": 11.8
+        },
+        "clouds": {
+            "all": 1
+        },
+        "dt": 1542208500,
+        "sys": {
+            "type": 1,
+            "id": 1969,
+            "message": 0.0091,
+            "country": "US",
+            "sunrise": 1542195677,
+            "sunset": 1542231436
+        },
+        "id": 5116508,
+        "name": "Elmont",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -74.14,
+            "lat": 41.3
+        },
+        "weather": [
+            {
+                "id": 600,
+                "main": "Snow",
+                "description": "light snow",
+                "icon": "13d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 1.76,
+            "pressure": 1028,
+            "humidity": 47,
+            "temp_min": -2.2,
+            "temp_max": 3.9
+        },
+        "visibility": 16093,
+        "wind": {
+            "speed": 6.2,
+            "deg": 310,
+            "gust": 10.3
+        },
+        "clouds": {
+            "all": 75
+        },
+        "dt": 1542207360,
+        "sys": {
+            "type": 1,
+            "id": 2114,
+            "message": 0.0043,
+            "country": "US",
+            "sunrise": 1542195860,
+            "sunset": 1542231445
+        },
+        "id": 5120062,
+        "name": "Harriman",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -73.84,
+            "lat": 42.69
+        },
+        "weather": [
+            {
+                "id": 804,
+                "main": "Clouds",
+                "description": "overcast clouds",
+                "icon": "04d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": -2.79,
+            "pressure": 1030,
+            "humidity": 42,
+            "temp_min": -3.3,
+            "temp_max": -2.2
+        },
+        "visibility": 16093,
+        "wind": {
+            "speed": 10.3,
+            "deg": 290,
+            "gust": 14.4
+        },
+        "clouds": {
+            "all": 90
+        },
+        "dt": 1542207240,
+        "sys": {
+            "type": 1,
+            "id": 2088,
+            "message": 0.0042,
+            "country": "US",
+            "sunrise": 1542195991,
+            "sunset": 1542231168
+        },
+        "id": 5144097,
+        "name": "Westmere",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -73.84,
+            "lat": 42.7
+        },
+        "weather": [
+            {
+                "id": 804,
+                "main": "Clouds",
+                "description": "overcast clouds",
+                "icon": "04d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": -2.79,
+            "pressure": 1030,
+            "humidity": 42,
+            "temp_min": -3.3,
+            "temp_max": -2.2
+        },
+        "visibility": 16093,
+        "wind": {
+            "speed": 10.3,
+            "deg": 290,
+            "gust": 14.4
+        },
+        "clouds": {
+            "all": 90
+        },
+        "dt": 1542207240,
+        "sys": {
+            "type": 1,
+            "id": 2088,
+            "message": 0.0041,
+            "country": "US",
+            "sunrise": 1542195993,
+            "sunset": 1542231167
+        },
+        "id": 5113348,
+        "name": "Colonie",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -73.45,
+            "lat": 45.01
+        },
+        "weather": [
+            {
+                "id": 804,
+                "main": "Clouds",
+                "description": "overcast clouds",
+                "icon": "04d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": -8.1,
+            "pressure": 1029,
+            "humidity": 61,
+            "temp_min": -9.1,
+            "temp_max": -6.7
+        },
+        "visibility": 16093,
+        "wind": {
+            "speed": 4.1,
+            "deg": 310,
+            "gust": 8.2
+        },
+        "clouds": {
+            "all": 90
+        },
+        "dt": 1542208740,
+        "sys": {
+            "type": 1,
+            "id": 2901,
+            "message": 0.0138,
+            "country": "US",
+            "sunrise": 1542196260,
+            "sunset": 1542230710
+        },
+        "id": 5112215,
+        "name": "Champlain",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -73.57,
+            "lat": 45.5
+        },
+        "weather": [
+            {
+                "id": 803,
+                "main": "Clouds",
+                "description": "broken clouds",
+                "icon": "04d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": -9.35,
+            "pressure": 1028,
+            "humidity": 47,
+            "temp_min": -10,
+            "temp_max": -9
+        },
+        "visibility": 14484,
+        "wind": {
+            "speed": 10.3,
+            "deg": 280,
+            "gust": 13.9
+        },
+        "clouds": {
+            "all": 75
+        },
+        "dt": 1542207600,
+        "sys": {
+            "type": 1,
+            "id": 3851,
+            "message": 0.0054,
+            "country": "CA",
+            "sunrise": 1542196370,
+            "sunset": 1542230657
+        },
+        "id": 6077243,
+        "name": "Montreal",
+        "cod": 200
+    }
+]

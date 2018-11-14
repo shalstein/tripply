@@ -14,7 +14,6 @@ class Direction
         response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}&key=#{ENV['google_directions_key']}&units=metric"
         
         directions = JSON.parse(response.body)
-
         # open('google_dirV2.json', 'w') do |f|
         #     f.puts directions.to_json 
         # end
@@ -95,10 +94,7 @@ class Direction
                 divided_points_with_counter = split_points_to_100km(points, polyline_distance_counter)
                 one_hundered_km_points = polyline_temp_bucket.flatten.concat(divided_points_with_counter[:divided_points].flatten)
                 weather_report = get_weather(one_hundered_km_points[0])
-                weather_conditions_distance = update_weather_conditions_distance(weather_report, (polyline_distance + polyline_distance_counter - divided_points_with_counter[:remaining_km]) , weather_conditions_distance )
-                
-
-                puts weather_conditions_distance
+                weather_conditions_distance = update_weather_conditions_distance(weather_report, (polyline_distance + polyline_distance_counter - divided_points_with_counter[:remaining_km]) , weather_conditions_distance )                
                 divided_polylines << construct_encoded_polyline_with_color(one_hundered_km_points, weather_report['id'])
                 polyline_temp_bucket = divided_points_with_counter[:remaining_points] 
                 polyline_distance_counter = divided_points_with_counter[:remaining_km]
@@ -121,11 +117,9 @@ class Direction
         response = Faraday.get("https://api.openweathermap.org/data/2.5/weather?lat=#{stringify_coordinates['lat']}&lon=#{stringify_coordinates['lng']}&APPID=#{ENV['WEATHER_API_KEY']}&units=metric")
         weather = JSON.parse(response.body)
         
-        # open('weather.json', 'a') do |f|
-        #     f.puts weather.to_json 
-        # end        
-
-        # { temp: weather['main']['temp'], visibility: weather['visibility'], city_name: weather['name'], location: coordinates}.merge(weather['weather'][0])
+        open('weather2.json', 'a') do |f|
+            f.puts weather.to_json 
+        end        
         weather['weather'][0]
     end
 
