@@ -62,8 +62,7 @@ class App extends Component {
   }
 
   updateIsloading = () => { 
-    setTimeout(() =>  this.setState({isLoading: !this.state.isLoading}),2000)
-
+    this.setState(previousState => {isLoading: !previousState.isLoading})
   }
 
   validateAddressInputs = () => {
@@ -77,8 +76,8 @@ class App extends Component {
 
   handleSearchClick = (event, t) => {
     this.updateIsloading()
+    
     if (this.validateAddressInputs()){
-      console.log('valdiae')
     fetch(`/api/directions/?origin=${this.state.origin}&destination=${this.state.destination}`)
     .then(response => response.json())
     .then(tripData => { 
@@ -89,7 +88,6 @@ class App extends Component {
     })
     .catch(e => console.error(e))
     }
-    debugger
     this.updateIsloading()
   }
 
@@ -97,9 +95,12 @@ class App extends Component {
     this.setState({directions: null, origin: '', destination: ''})
   }
 
+  componentDidUpdate = (previous_props, previous_state) => {
+    console.log(this.state)
+  }
+
   render() {
     const {classes} = this.props
-
     let currentComponent = <AddressesInput loading={this.state.isLoading} origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
 
     if (this.state.directions) {
