@@ -57,7 +57,7 @@ const styles = theme => ({
 
                 <TextField
                 name='destination'
-                label="Ariving To"
+                label="Arriving To"
                 className={classes.textField}
                 margin='normal'
                 value={this.props.destination}
