@@ -17,17 +17,17 @@ Before installing you will need to generate a key for using the Google Direction
 Now we run the following commands in the terminal:
 
 ```bash
-    git clone git@github.com:peacestone/tripply.git`
-    cd  tripply
-    yarn install
-    bundle install
-    rails s
+git clone git@github.com:peacestone/tripply.git
+cd ./tripply
+yarn install
+bundle install
+rails s
 ```
 
 in a separate terminal window start the webpack compiler:
 
 ```bash
- ./bin/webpack-dev-server
+./bin/webpack-dev-server
 ```
 
 Log on to localhost:3000 and it should be working.
