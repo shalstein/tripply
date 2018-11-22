@@ -11,9 +11,11 @@ class Direction
 
     def fetch_directions 
 
-        response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}&key=#{ENV['google_directions_key']}&units=metric"
-        
-        directions = JSON.parse(response.body)
+        # response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}&key=#{ENV['google_directions_key']}&units=metric"
+
+        directions_file = File.read('google_dirV3.json')
+        directions = JSON.parse(directions_file)
+        # directions = JSON.parse(response.body)
         open('google_dirV3.json', 'w') do |f|
             f.puts directions.to_json 
         end
@@ -61,10 +63,10 @@ class Direction
                 one_hundered_km_points << points[previous_index..current_index + 1]
                 previous_index = current_index + 1
                 points_distance_counter = 0
+                polyline_distance_counter = 0
             end
         end
-
-        one_hundered_km_points[0].concat(remaining_points_from_previous_polyline)
+        one_hundered_km_points[0] = remaining_points_from_previous_polyline + one_hundered_km_points[0]
         {divided_points: one_hundered_km_points, remaining_km: points_distance_counter, remaining_points: points[previous_index..-1]}
     end
 
@@ -118,6 +120,7 @@ class Direction
             end
             directions << {html_instructions: step['html_instructions'], duration: step['duration']['text']}
         end
+        #TODO: handle case when points_temp_bucket empty
         destination_weather = get_weather(points_temp_bucket[-1][-1])
         weather_conditions_distance = update_weather_conditions_distance(destination_weather, polyline_distance_counter, weather_conditions_distance)
         divided_polylines << construct_encoded_polyline_with_color(points_temp_bucket.flatten, destination_weather['id'])
