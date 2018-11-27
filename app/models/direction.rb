@@ -11,7 +11,7 @@ class Direction
 
     def fetch_directions 
 
-        response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}&key=#{ENV['google_directions_key']}&units=metric"
+        response = Faraday.get "https://maps.googleapis.com/maps/api/directions/json?origin=#{@origin}&destination=#{@destination}&key=#{ENV['GOOGLE_DIRECTIONS_KEY']}&units=metric"
 
 
         directions = JSON.parse(response.body)

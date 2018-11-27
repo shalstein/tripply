@@ -12,9 +12,9 @@ When you are done, you can click the search again button on the upper right-hand
 
 ## Installation
 
-Before installing you will need to generate a key for using the Google Direction, Google Maps JavaScript, and the OpenWeatherMap API's. Generate a key and set two environmental variables. One should be called `google_directions_key` for the directions key. The second should be called `WEATHER_API_KEY` for the weather key.
+Before installing you will need to generate a key for using Google Directions API, and OpenWeatherMap API. Generate the keys and set two environmental variables. One should be called `GOOGLE_DIRECTIONS_KEY` for the directions key. The second should be called `WEATHER_API_KEY` for the weather key.
 
-Now we run the following commands in the terminal:
+Now run the following commands in the terminal:
 
 ```bash
 git clone git@github.com:peacestone/tripply.git
@@ -30,7 +30,7 @@ in a separate terminal window start the webpack compiler:
 ./bin/webpack-dev-server
 ```
 
-Log on to localhost:3000 and it should be working.
+Browse to localhost:3000 and it should be working.
 
 ## Contribute
 

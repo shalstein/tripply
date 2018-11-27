@@ -5,7 +5,6 @@ import AddressesInput from './components/AddressesInput'
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import TripInfo from './components/tripInfo';
-import { rejects } from 'assert';
 
 const styles = theme => ({
 
