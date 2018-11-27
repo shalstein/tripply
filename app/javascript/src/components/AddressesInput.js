@@ -44,6 +44,7 @@ const styles = theme => ({
                 <TextField
                 error={!this.props.addressInputs.origin.isValid}
                 label='Leaving From'
+                onKeyDown={this.props.handleInputKeydown}
                 name='origin'
                 className={classes.textField}
 
@@ -58,6 +59,7 @@ const styles = theme => ({
                 label="Arriving To"
                 className={classes.textField}
                 margin='normal'
+                onKeyDown={this.props.handleInputKeydown}
                 value={this.props.addressInputs.destination.value}
                 onChange={this.props.handleAddressChange}
                 error={!this.props.addressInputs.destination.isValid}

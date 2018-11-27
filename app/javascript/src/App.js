@@ -45,26 +45,32 @@ class App extends Component {
     this.setState( (state) => ({addressInputs: {...state.addressInputs, ...newValue}}))
   }
 
+  handleInputKeydown = (event, t) => {
+    if(event.keyCode === 13){
+        this.handleSearchClick();
+    }
+  }
+
   updateIsloading = () => { 
     this.setState(previousState => ({isLoading: !previousState.isLoading}))
   }
 
   validateAddressInputs = () => {
 
-    let validFlag = true;
+    let isValid = true;
     const newAddressInputs = {};
     const addressInputsKeys = Object.keys(this.state.addressInputs);
     addressInputsKeys.forEach( input => {
       if (this.state.addressInputs[input].value.trim() === '') {
         newAddressInputs[input] = {value: '', isValid: false} 
-        validFlag = false
+        isValid = false
       }
     })
     
-    if(!validFlag){
+    if(!isValid){
       this.setState( (state) => ({addressInputs: {...state.addressInputs, ...newAddressInputs}}))
     }
-    return validFlag
+    return isValid
   }
 
   handleSearchClick = (event, t) => {
@@ -92,7 +98,7 @@ class App extends Component {
 
   render() {
     const {classes} = this.props
-    let currentComponent = <AddressesInput loading={this.state.isLoading} addressInputs={this.state.addressInputs} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
+    let currentComponent = <AddressesInput loading={this.state.isLoading} handleInputKeydown={this.handleInputKeydown} addressInputs={this.state.addressInputs} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
 
     if (this.state.directions) {
        currentComponent = <TripInfo directions={this.state.directions} mapData={this.state.mapData} weather={this.state.weather}   />
