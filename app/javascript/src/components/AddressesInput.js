@@ -2,9 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper'
-import SearchIcon from '@material-ui/icons/Search'
 import Button from '@material-ui/core/Button'
-import IconButton from '@material-ui/core/IconButton'
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 const styles = theme => ({
@@ -44,13 +42,13 @@ const styles = theme => ({
               <form className={classes.form} noValidate>
                 <input type='hidden' name="authenticity_token" />
                 <TextField
-                
+                error={!this.props.addressInputs.origin.isValid}
                 label='Leaving From'
                 name='origin'
                 className={classes.textField}
 
                 margin='normal'
-                value={this.props.origin}
+                value={this.props.addressInputs.origin.value}
                 onChange={this.props.handleAddressChange}
                 />
 
@@ -60,8 +58,10 @@ const styles = theme => ({
                 label="Arriving To"
                 className={classes.textField}
                 margin='normal'
-                value={this.props.destination}
+                value={this.props.addressInputs.destination.value}
                 onChange={this.props.handleAddressChange}
+                error={!this.props.addressInputs.destination.isValid}
+
                 /> 
 
                 <div name='fetch-wrapper' style={{position: 'relative'}}>

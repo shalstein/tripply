@@ -5,6 +5,7 @@ import AddressesInput from './components/AddressesInput'
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import TripInfo from './components/tripInfo';
+import { rejects } from 'assert';
 
 const styles = theme => ({
 
@@ -32,15 +33,16 @@ class App extends Component {
    this.state = {
     directions: null ,
     mapData: {polylines:[], bounds: {} },
-     origin: '',
-     destination: '',
-     weather: {},
-     isLoading: false,
+    addressInputs: {origin: {value: '', isValid: true }, destination: {value: '', isValid: true}},
+    weather: {},
+    isLoading: false,
    }
   }
 
-  handleAddressChange = (event, t) => {
-    this.setState({[event.target.name]: event.target.value})
+  handleAddressChange = (event) => {
+    const newValue = {}
+    newValue[event.target.name] = {value: event.target.value, isValid: true} 
+    this.setState( (state) => ({addressInputs: {...state.addressInputs, ...newValue}}))
   }
 
   updateIsloading = () => { 
@@ -48,47 +50,49 @@ class App extends Component {
   }
 
   validateAddressInputs = () => {
-    if(this.state.destination.trim() === '' || this.state.origin.trim() === ''){
-      console.log('fasle valdiadt')
-      return false
+
+    let validFlag = true;
+    const newAddressInputs = {};
+    const addressInputsKeys = Object.keys(this.state.addressInputs);
+    addressInputsKeys.forEach( input => {
+      if (this.state.addressInputs[input].value.trim() === '') {
+        newAddressInputs[input] = {value: '', isValid: false} 
+        validFlag = false
+      }
+    })
+    
+    if(!validFlag){
+      this.setState( (state) => ({addressInputs: {...state.addressInputs, ...newAddressInputs}}))
     }
-    console.log('rtrue validate')
-    return true
+    return validFlag
   }
 
   handleSearchClick = (event, t) => {
-    
-    this.updateIsloading();
-    new Promise((resolve, reject) => {
-      if (this.validateAddressInputs()) {
-         resolve()
-      }
-       reject('Cannot search empty addresses')
-    })
-    .then(() => {
-      return fetch(`/api/directions/?origin=${this.state.origin}&destination=${this.state.destination}`)
-    })    
-    .then(response => response.json())
-    .then(tripData => { 
-      if (tripData.directions_status !== 'OK'){
-        throw new Error(`API status: ${tripData.directions_status}`)
-      }
-       this.setState({directions: tripData.directions, weather: tripData.weather_conditions, mapData: tripData.mapData})
-    })
-    .catch(e => console.error(e))
-    .finally(() => {
-      this.updateIsloading()
-    })
-    
+    if (this.validateAddressInputs()) {
+      this.updateIsloading();
+
+      fetch(`/api/directions/?origin=${this.state.addressInputs.origin.value}&destination=${this.state.addressInputs.destination.value}`)
+      .then(response => response.json())
+      .then(tripData => { 
+        if (tripData.directions_status !== 'OK'){
+        }
+         this.setState({directions: tripData.directions, weather: tripData.weather_conditions, mapData: tripData.mapData})
+      })
+      .catch(e => console.error(e))
+      .finally(() => {
+        this.updateIsloading()
+      })
+    }
   }
 
   handleNewSearchClick = event => {
-    this.setState({directions: null, origin: '', destination: ''})
+    this.setState({directions: null, addressInputs: {origin: {value: '', isValid: true }, destination: {value: '', isValid: true}}},
+    )
   }
 
   render() {
     const {classes} = this.props
-    let currentComponent = <AddressesInput loading={this.state.isLoading} origin={this.state.origin} destination= {this.state.destination} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
+    let currentComponent = <AddressesInput loading={this.state.isLoading} addressInputs={this.state.addressInputs} handleAddressChange={this.handleAddressChange} handleSearchClick={this.handleSearchClick}/>
 
     if (this.state.directions) {
        currentComponent = <TripInfo directions={this.state.directions} mapData={this.state.mapData} weather={this.state.weather}   />
