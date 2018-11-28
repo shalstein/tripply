@@ -19,7 +19,6 @@ class Direction
         if directions['status'] == 'OK'
             data = divide_polylines_and_parse_directions(directions['routes'][0])
             data['directions_status'] = directions['status']
-            puts @n_counter
             data
         else
             {directions_status: directions['status']}

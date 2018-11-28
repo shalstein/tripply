@@ -47,7 +47,7 @@ const styles = theme => ({
                 onKeyDown={this.props.handleInputKeydown}
                 name='origin'
                 className={classes.textField}
-
+                helperText={!this.props.addressInputs.origin.isValid && 'Enter an Address'}
                 margin='normal'
                 value={this.props.addressInputs.origin.value}
                 onChange={this.props.handleAddressChange}
@@ -63,7 +63,7 @@ const styles = theme => ({
                 value={this.props.addressInputs.destination.value}
                 onChange={this.props.handleAddressChange}
                 error={!this.props.addressInputs.destination.isValid}
-
+                helperText={!this.props.addressInputs.destination.isValid && 'Enter an Address'}
                 /> 
 
                 <div name='fetch-wrapper' style={{position: 'relative'}}>
