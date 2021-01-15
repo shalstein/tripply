@@ -6,9 +6,9 @@
     "@material-ui/icons": "^1.1.1",
     "@rails/webpacker": "3.5",
     "babel-preset-react": "^6.24.1",
-    "prop-types": "^15.6.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-google-maps": "^9.4.5",
     "typeface-roboto": "^0.0.54"
   },
